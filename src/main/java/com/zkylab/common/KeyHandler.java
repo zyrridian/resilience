@@ -60,12 +60,12 @@ public class KeyHandler implements KeyListener {
             if (code == KeyEvent.VK_UP || code == KeyEvent.VK_W) {
                 gamePanel.ui.commandNumber--;
                 gamePanel.playSoundEffect(5);
-                if (gamePanel.ui.commandNumber < 0) gamePanel.ui.commandNumber = 3;
+                if (gamePanel.ui.commandNumber < 0) gamePanel.ui.commandNumber = 4;
             }
             if (code == KeyEvent.VK_DOWN || code == KeyEvent.VK_S) {
                 gamePanel.ui.commandNumber++;
                 gamePanel.playSoundEffect(5);
-                if (gamePanel.ui.commandNumber > 3) gamePanel.ui.commandNumber = 0;
+                if (gamePanel.ui.commandNumber > 4) gamePanel.ui.commandNumber = 0;
             }
             if (code == KeyEvent.VK_ENTER) {
                 gamePanel.playSoundEffect(3);
@@ -78,9 +78,12 @@ public class KeyHandler implements KeyListener {
                     gamePanel.playMusic(22);
                 }
                 if (gamePanel.ui.commandNumber == 2) {
+                    gamePanel.ui.titleScreenState = 99;
+                }
+                if (gamePanel.ui.commandNumber == 3) {
                     gamePanel.ui.titleScreenState = 3;
                 }
-                if (gamePanel.ui.commandNumber == 3) System.exit(code);
+                if (gamePanel.ui.commandNumber == 4) System.exit(code);
             }
         } else if (gamePanel.ui.titleScreenState == 2) {
             if (code == KeyEvent.VK_ENTER) {
@@ -90,6 +93,10 @@ public class KeyHandler implements KeyListener {
                 // gamePanel.gameState = GamePanel.CUTSCENE_STATE;
                 // gamePanel.cManager.sceneNumber = gamePanel.cManager.opening;
             }
+            if (code == KeyEvent.VK_ESCAPE) {
+                gamePanel.ui.titleScreenState = 1;
+            }
+        } else if (gamePanel.ui.titleScreenState == 99) {
             if (code == KeyEvent.VK_ESCAPE) {
                 gamePanel.ui.titleScreenState = 1;
             }

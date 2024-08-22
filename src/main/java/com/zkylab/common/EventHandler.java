@@ -63,22 +63,30 @@ public class EventHandler {
      * Sets default dialogues for various events.
      */
     public void setDialogue() {
-        eventMaster.dialogues[0][0] = "Ada orang yang terlihat kebingungan.";
-        eventMaster.dialogues[0][1] = "Bicaralah padanya.";
-        eventMaster.dialogues[0][2] = "Atau abaikan saja.";
+        eventMaster.dialogues[0][0] = "Sebuah kursi kosong.";
+        // eventMaster.dialogues[0][0] = "Ada orang yang terlihat kebingungan.";
+        // eventMaster.dialogues[0][1] = "Bicaralah padanya.";
+        // eventMaster.dialogues[0][2] = "Atau abaikan saja.";
 
         eventMaster.dialogues[1][0] = "Kamu meminum air. Energi dipulihkan.";
         eventMaster.dialogues[1][1] = "(Progress telah tersimpan)";
 
-        // Ruang Utama
-        eventMaster.dialogues[2][0] = "Pintunya terkunci.";
-        eventMaster.dialogues[2][1] = "Ada sesuatu yang menghalangi.";
-        eventMaster.dialogues[2][2] = "Bahkan kunci pun tidak bisa digunakan.";
-        eventMaster.dialogues[3][0] = "Sebuah tanaman.";
-        eventMaster.dialogues[3][1] = "Terbuat dari plastik.";
-        eventMaster.dialogues[4][0] = "Tidak ada acara menarik di televisi.";
-        eventMaster.dialogues[4][1] = "Membosankan.";
-        eventMaster.dialogues[5][0] = "Sofa yang nyaman.";
+        // // Ruang Utama
+
+        eventMaster.dialogues[2][0] = "Pohon besar yang kokoh.";
+        eventMaster.dialogues[3][0] = "Sebuah mobil tua terparkir di bawah tenda.";
+        eventMaster.dialogues[3][1] = "Sepertinya masih bisa diperbaiki.";
+        eventMaster.dialogues[4][0] = "Tempat sampah ini kosong";
+        eventMaster.dialogues[5][0] = "Kompor tua yang tidak dapat digunakan.";
+        eventMaster.dialogues[5][1] = "Namun masih panas.";
+        // eventMaster.dialogues[2][0] = "Pintunya terkunci.";
+        // eventMaster.dialogues[2][1] = "Ada sesuatu yang menghalangi.";
+        // eventMaster.dialogues[2][2] = "Bahkan kunci pun tidak bisa digunakan.";
+        // eventMaster.dialogues[3][0] = "Sebuah tanaman.";
+        // eventMaster.dialogues[3][1] = "Terbuat dari plastik.";
+        // eventMaster.dialogues[4][0] = "Tidak ada acara menarik di televisi.";
+        // eventMaster.dialogues[4][1] = "Membosankan.";
+        // eventMaster.dialogues[5][0] = "Sofa yang nyaman.";
 
         // Dapur
         eventMaster.dialogues[6][0] = "Sebuah meja dengan noda yang tidak bisa dihapus.";
@@ -278,15 +286,42 @@ public class EventHandler {
         // ========== EVENT TELEPORT ========== //
         if (hit(0, 24, 31, "down"))
             teleport(1, 15, 27, GamePanel.OUTSIDE_AREA); // house to town teleport
-        if (hit(0, 24, 23, "up"))
+        else if (hit(0, 24, 23, "up"))
             openTheDoor(5, 24, 28, GamePanel.INDOOR_AREA); // house to indoor teleport
-        if (hit(5, 24, 28, "down"))
+        else if (hit(5, 24, 28, "down"))
             openTheDoor(0, 24, 28, GamePanel.INDOOR_AREA); // indoor to house teleport
-        if (hit(1, 15, 27, "up"))
+        else if (hit(1, 15, 27, "up"))
             teleport(0, 24, 31, GamePanel.OUTSIDE_AREA); // town to house teleport
 
+        // ========== INTERACT OBJECT ========= //
+        else if (hit(0, 18, 25, "right") || hit(0, 19, 24, "down") || hit(0, 19, 26, "up") || hit(0, 20, 25, "left"))
+            interactObject(0);
+        else if (hit(0, 27, 28, "right") || hit(0, 27, 29, "right") || hit(0, 27, 30, "right")
+                || hit(0, 27, 30, "right"))
+            healingPool();
+        else if (hit(0, 18, 21, "up") || hit(0, 19, 21, "up") || hit(0, 20, 21, "up") || hit(0, 21, 21, "up")
+                || hit(0, 21, 18, "left") || hit(0, 21, 19, "left") || hit(0, 21, 20, "left"))
+            interactObject(2);
+
+        // mobil
+        else if (hit(0, 29, 23, "up") || hit(0, 30, 23, "up") || hit(0, 28, 20, "right") || hit(0, 28, 21, "right")
+                || hit(0, 28, 22, "right") || hit(0, 29, 19, "down") || hit(0, 30, 19, "down")) {
+            interactObject(3);
+
+        }
+
+        // tempat sampah
+        else if (hit(0, 27, 23, "up") || hit(0, 28, 22, "left") || hit(0, 27, 21, "down"))
+        interactObject(5);
+
+        // kompor tua
+        else if (hit(0, 27, 21, "up") || hit(0, 28, 20, "left") || hit(0, 27, 19, "down"))
+        interactObject(6);
+        
+        
         else if (hit(0, 36, 19, "right") || hit(0, 36, 20, "right"))
             teleport(4, 15, 27, GamePanel.OUTSIDE_AREA); // Teleport kota 1 ke kota 5
+
 
         else if (hit(1, 25, 31, "down") || hit(1, 26, 31, "down"))
             teleport(0, 28, 14, GamePanel.OUTSIDE_AREA); // Teleport kota 2 ke kota 1

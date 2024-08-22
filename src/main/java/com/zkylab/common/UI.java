@@ -11,6 +11,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 import com.zkylab.entity.Entity;
+import com.zkylab.object.OBJ_Background;
 import com.zkylab.object.OBJ_Coin_Bronze;
 import com.zkylab.object.OBJ_Heart;
 import com.zkylab.object.OBJ_Mana_Crystal;
@@ -22,7 +23,7 @@ public class UI {
     GamePanel gamePanel;
     Graphics2D g2;
     public Font maruMonica, purisaBold, yoster, november;
-    BufferedImage heart_full, heart_half, heart_blank, crystal_full, crystal_blank, coin;
+    BufferedImage heart_full, heart_half, heart_blank, crystal_full, crystal_blank, coin, bgchallenge;
     public BufferedImage day, night;
     public boolean messageOn = false;
     ArrayList<String> message = new ArrayList<>();
@@ -73,6 +74,9 @@ public class UI {
 
         Entity bronzeCoin = new OBJ_Coin_Bronze(gamePanel);
         coin = bronzeCoin.down1;
+
+        Entity bg = new OBJ_Background(gamePanel);
+        bgchallenge = bg.down1;
 
         Entity sun = new OBJ_Sun(gamePanel);
         day = sun.down1;
@@ -172,8 +176,8 @@ public class UI {
             manaStartY = y + 32;
 
             // if (i % 8 == 0) {
-            //     x = gamePanel.tileSize / 2;
-            //     y += iconSize;
+            // x = gamePanel.tileSize / 2;
+            // y += iconSize;
             // }
         }
 
@@ -226,7 +230,8 @@ public class UI {
                     double oneScale = (double) gamePanel.tileSize / monster.maxLife;
                     double hpBarValue = oneScale * monster.life;
 
-                    if (hpBarValue < 0) hpBarValue = 0;
+                    if (hpBarValue < 0)
+                        hpBarValue = 0;
 
                     g2.setColor(new Color(35, 35, 35));
                     g2.fillRect(monster.getScreenX() - 1, monster.getScreenY() - 16, gamePanel.tileSize + 2, 12);
@@ -248,7 +253,8 @@ public class UI {
 
                     int x = gamePanel.screenWidth / 2 - gamePanel.tileSize * 4;
                     int y = gamePanel.tileSize * 10;
-                    if (hpBarValue < 0) hpBarValue = 0;
+                    if (hpBarValue < 0)
+                        hpBarValue = 0;
 
                     g2.setColor(new Color(35, 35, 35));
                     g2.fillRect(x - 1, y - 1, gamePanel.tileSize * 8 + 2, 22);
@@ -332,7 +338,7 @@ public class UI {
 
             // Title Name
             g2.setFont(g2.getFont().deriveFont(Font.PLAIN, 60F));
-            String text = "Living with AI";
+            String text = "Resilience";
             int x = getXforCenteredText(text);
             int y = (int) (gamePanel.tileSize * 2.5);
 
@@ -346,15 +352,15 @@ public class UI {
 
             // Character Image
             x = gamePanel.screenWidth / 2 - (gamePanel.tileSize * 2) / 2;
-            y += gamePanel.tileSize * 1.5;
             g2.drawImage(gamePanel.player.down1, x, y, gamePanel.tileSize * 2, gamePanel.tileSize * 2, null);
+            y += gamePanel.tileSize * 1;
 
             // Menu
             g2.setFont(g2.getFont().deriveFont(Font.PLAIN, 28F));
 
             text = "NEW GAME";
             x = getXforCenteredText(text);
-            y += gamePanel.tileSize * 3.5;
+            y += gamePanel.tileSize * 2.5;
             g2.drawString(text, x, y);
             if (commandNumber == 0) {
                 g2.drawString(">", x - gamePanel.tileSize, y);
@@ -368,7 +374,7 @@ public class UI {
                 g2.drawString(">", x - gamePanel.tileSize, y);
             }
 
-            text = "CREDITS";
+            text = "CHALLENGE MODE";
             x = getXforCenteredText(text);
             y += gamePanel.tileSize;
             g2.drawString(text, x, y);
@@ -376,11 +382,19 @@ public class UI {
                 g2.drawString(">", x - gamePanel.tileSize, y);
             }
 
-            text = "EXIT";
+            text = "CREDITS";
             x = getXforCenteredText(text);
             y += gamePanel.tileSize;
             g2.drawString(text, x, y);
             if (commandNumber == 3) {
+                g2.drawString(">", x - gamePanel.tileSize, y);
+            }
+
+            text = "EXIT";
+            x = getXforCenteredText(text);
+            y += gamePanel.tileSize;
+            g2.drawString(text, x, y);
+            if (commandNumber == 4) {
                 g2.drawString(">", x - gamePanel.tileSize, y);
             }
 
@@ -471,7 +485,7 @@ public class UI {
             x = (int) (gamePanel.tileSize * 1);
             y = (int) (gamePanel.tileSize * 1.25);
             g2.drawString(text, x, y);
-            
+
         } else if (titleScreenState == 3) {
 
             g2.setColor(new Color(0, 0, 0));
@@ -570,7 +584,34 @@ public class UI {
             y = (int) (gamePanel.tileSize * 1.25);
             g2.drawString(text, x, y);
 
+        } else if (titleScreenState == 99) {
+            g2.setColor(new Color(0, 0, 0));
+            g2.fillRect(0, 0, gamePanel.screenWidth, gamePanel.screenHeight);
 
+            g2.drawImage(bgchallenge, null, gamePanel);
+
+            // Title Name
+            g2.setFont(g2.getFont().deriveFont(Font.PLAIN, 38F));
+            String text = "Start Challenge";
+            int x = getXforCenteredText(text);
+            int y = gamePanel.tileSize * 2;
+
+            // Shadow
+            g2.setColor(Color.gray);
+            g2.drawString(text, x + 3, y + 3);
+
+            // Main Color
+            g2.setColor(Color.white);
+            g2.drawString(text, x, y);
+
+            // Menu
+            g2.setFont(g2.getFont().deriveFont(Font.PLAIN, 20F));
+
+            g2.setFont(g2.getFont().deriveFont(Font.BOLD, 15F));
+            text = "[ESC] - Kembali";
+            x = gamePanel.tileSize;
+            y = (int) (gamePanel.tileSize * 1.25);
+            g2.drawString(text, x, y);
         }
 
     }
@@ -613,7 +654,8 @@ public class UI {
             g2.setFont(g2.getFont().deriveFont(Font.PLAIN, 20F));
             int length = (int) g2.getFontMetrics().getStringBounds(npc.name, g2).getWidth();
             g2.drawString(npc.name, x + (width / 2 - length / 2), y + (gamePanel.tileSize - 14));
-            // g2.drawString(npc.name, x + (gamePanel.tileSize - 32), y + (gamePanel.tileSize - 14));
+            // g2.drawString(npc.name, x + (gamePanel.tileSize - 32), y +
+            // (gamePanel.tileSize - 14));
 
             // Dialog box
             x = x + width;
@@ -651,7 +693,8 @@ public class UI {
             if (gamePanel.keyHandler.enterPressed) {
                 charIndex = 0;
                 combinedText = "";
-                if (gamePanel.gameState == GamePanel.DIALOGUE_STATE || gamePanel.gameState == GamePanel.CUTSCENE_STATE) {
+                if (gamePanel.gameState == GamePanel.DIALOGUE_STATE
+                        || gamePanel.gameState == GamePanel.CUTSCENE_STATE) {
                     npc.dialogueIndex++;
                     gamePanel.keyHandler.enterPressed = false;
                 }
@@ -713,18 +756,30 @@ public class UI {
         final int lineHeight = 35;
 
         // Names
-        g2.drawString("Level", textX, textY); textY += lineHeight;
-        g2.drawString("Nyawa", textX, textY); textY += lineHeight;
-        g2.drawString("Mana", textX, textY); textY += lineHeight;
-        g2.drawString("Kekuatan", textX, textY); textY += lineHeight;
-        g2.drawString("Kelincahan", textX, textY); textY += lineHeight;
-        g2.drawString("Atk", textX, textY); textY += lineHeight;
-        g2.drawString("Def", textX, textY); textY += lineHeight;
-        g2.drawString("Exp", textX, textY); textY += lineHeight;
-        g2.drawString("Next Level", textX, textY); textY += lineHeight;
-        g2.drawString("Koin", textX, textY); textY += lineHeight + 8;
-        g2.drawString("Senjata", textX, textY); textY += lineHeight + 15;
-        g2.drawString("Perisai", textX, textY); textY += lineHeight;
+        g2.drawString("Level", textX, textY);
+        textY += lineHeight;
+        g2.drawString("Nyawa", textX, textY);
+        textY += lineHeight;
+        g2.drawString("Mana", textX, textY);
+        textY += lineHeight;
+        g2.drawString("Kekuatan", textX, textY);
+        textY += lineHeight;
+        g2.drawString("Kelincahan", textX, textY);
+        textY += lineHeight;
+        g2.drawString("Atk", textX, textY);
+        textY += lineHeight;
+        g2.drawString("Def", textX, textY);
+        textY += lineHeight;
+        g2.drawString("Exp", textX, textY);
+        textY += lineHeight;
+        g2.drawString("Next Level", textX, textY);
+        textY += lineHeight;
+        g2.drawString("Koin", textX, textY);
+        textY += lineHeight + 8;
+        g2.drawString("Senjata", textX, textY);
+        textY += lineHeight + 15;
+        g2.drawString("Perisai", textX, textY);
+        textY += lineHeight;
 
         // Values
         int tailX = (frameX + frameWidth) - 30;
@@ -829,9 +884,8 @@ public class UI {
 
             // Equip Cursor
             if (entity.inventory.get(i) == entity.currentWeapon ||
-                entity.inventory.get(i) == entity.currentShield ||
-                entity.inventory.get(i) == entity.currentLight
-            ) {
+                    entity.inventory.get(i) == entity.currentShield ||
+                    entity.inventory.get(i) == entity.currentLight) {
                 g2.setColor(new Color(240, 190, 90));
                 g2.fillRoundRect(slotX, slotY, gamePanel.tileSize, gamePanel.tileSize, 10, 10);
             }
@@ -916,10 +970,18 @@ public class UI {
         drawSubWindow(frameX, frameY, frameWidth, frameHeight);
 
         switch (subState) {
-            case 0: options_top(frameX, frameY); break;
-            case 1: options_fullScreenNotification(frameX, frameY); break;
-            case 2: options_control(frameX, frameY); break;
-            case 3: options_endGameConfirmation(frameX, frameY); break;
+            case 0:
+                options_top(frameX, frameY);
+                break;
+            case 1:
+                options_fullScreenNotification(frameX, frameY);
+                break;
+            case 2:
+                options_control(frameX, frameY);
+                break;
+            case 3:
+                options_endGameConfirmation(frameX, frameY);
+                break;
         }
 
         gamePanel.keyHandler.enterPressed = false;
@@ -1000,12 +1062,14 @@ public class UI {
         // Music
         textY += gamePanel.tileSize;
         g2.drawString("Musik", textX, textY);
-        if (commandNumber == 1) g2.drawString(">", textX - 25, textY);
+        if (commandNumber == 1)
+            g2.drawString(">", textX - 25, textY);
 
         // Sound Effect
         textY += gamePanel.tileSize;
         g2.drawString("SFX", textX, textY);
-        if (commandNumber == 2) g2.drawString(">", textX - 25, textY);
+        if (commandNumber == 2)
+            g2.drawString(">", textX - 25, textY);
 
         // Control
         textY += gamePanel.tileSize;
@@ -1102,23 +1166,37 @@ public class UI {
 
         textX = frameX + gamePanel.tileSize;
         textY += gamePanel.tileSize;
-        g2.drawString("Bergerak", textX, textY); textY += gamePanel.tileSize;
-        g2.drawString("Aksi", textX, textY); textY += gamePanel.tileSize;
-        g2.drawString("Menyerang", textX, textY); textY += gamePanel.tileSize;
-        g2.drawString("Bertahan", textX, textY); textY += gamePanel.tileSize;
-        g2.drawString("Menembak", textX, textY); textY += gamePanel.tileSize;
-        g2.drawString("Inventori", textX, textY); textY += gamePanel.tileSize;
-        g2.drawString("Pause", textX, textY); textY += gamePanel.tileSize;
+        g2.drawString("Bergerak", textX, textY);
+        textY += gamePanel.tileSize;
+        g2.drawString("Aksi", textX, textY);
+        textY += gamePanel.tileSize;
+        g2.drawString("Menyerang", textX, textY);
+        textY += gamePanel.tileSize;
+        g2.drawString("Bertahan", textX, textY);
+        textY += gamePanel.tileSize;
+        g2.drawString("Menembak", textX, textY);
+        textY += gamePanel.tileSize;
+        g2.drawString("Inventori", textX, textY);
+        textY += gamePanel.tileSize;
+        g2.drawString("Pause", textX, textY);
+        textY += gamePanel.tileSize;
 
         textX = (int) (frameX + gamePanel.tileSize * 5.7);
         textY = frameY + gamePanel.tileSize * 2;
-        g2.drawString("WASD", textX, textY); textY += gamePanel.tileSize;
-        g2.drawString("ENTER", textX, textY); textY += gamePanel.tileSize;
-        g2.drawString("J", textX, textY); textY += gamePanel.tileSize;
-        g2.drawString("K", textX, textY); textY += gamePanel.tileSize;
-        g2.drawString("L", textX, textY); textY += gamePanel.tileSize;
-        g2.drawString("I", textX, textY); textY += gamePanel.tileSize;
-        g2.drawString("ESC", textX, textY); textY += gamePanel.tileSize;
+        g2.drawString("WASD", textX, textY);
+        textY += gamePanel.tileSize;
+        g2.drawString("ENTER", textX, textY);
+        textY += gamePanel.tileSize;
+        g2.drawString("J", textX, textY);
+        textY += gamePanel.tileSize;
+        g2.drawString("K", textX, textY);
+        textY += gamePanel.tileSize;
+        g2.drawString("L", textX, textY);
+        textY += gamePanel.tileSize;
+        g2.drawString("I", textX, textY);
+        textY += gamePanel.tileSize;
+        g2.drawString("ESC", textX, textY);
+        textY += gamePanel.tileSize;
 
         // Back
         textX = frameX + gamePanel.tileSize;
@@ -1201,9 +1279,15 @@ public class UI {
 
     public void drawTradeScreen() {
         switch (subState) {
-            case 0: trade_select(); break;
-            case 1: trade_buy(); break;
-            case 2: trade_sell(); break;
+            case 0:
+                trade_select();
+                break;
+            case 1:
+                trade_buy();
+                break;
+            case 2:
+                trade_sell();
+                break;
         }
         gamePanel.keyHandler.enterPressed = false;
     }
@@ -1352,7 +1436,8 @@ public class UI {
 
             // Sell an item
             if (gamePanel.keyHandler.enterPressed) {
-                if (gamePanel.player.inventory.get(itemIndex) == gamePanel.player.currentWeapon || gamePanel.player.inventory.get(itemIndex) == gamePanel.player.currentShield) {
+                if (gamePanel.player.inventory.get(itemIndex) == gamePanel.player.currentWeapon
+                        || gamePanel.player.inventory.get(itemIndex) == gamePanel.player.currentShield) {
                     commandNumber = 0;
                     subState = 0;
                     npc.startDialogue(npc, 8);
