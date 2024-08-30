@@ -9,25 +9,24 @@ import com.zkylab.object.OBJ_Heart;
 import com.zkylab.object.OBJ_Mana_Crystal;
 import com.zkylab.object.OBJ_Rock;
 
-public class MON_RobotCube extends Entity {
-
+public class MON_Nibby extends Entity {
     GamePanel gamePanel;
 
-    public MON_RobotCube(GamePanel gamePanel) {
+    public MON_Nibby(GamePanel gamePanel) {
 
         super(gamePanel);
 
         this.gamePanel = gamePanel;
 
         type = type_monster;
-        name = "Robot Cube";
+        name = "Nibby";
         defaultSpeed = 1;
         speed = defaultSpeed;
-        maxLife = 7;
+        maxLife = 5;
         life = maxLife;
         attack = 1;
-        defense = 1;
-        exp = 5;
+        defense = 0;
+        exp = 2;
         projectile = new OBJ_Rock(gamePanel);
 
         solidArea.x = 9;
@@ -42,42 +41,42 @@ public class MON_RobotCube extends Entity {
     }
 
     public void getImage() {
-        up1 = setup("/monster/robot_cube_down_1", gamePanel.tileSize, gamePanel.tileSize);
-        up2 = setup("/monster/robot_cube_down_2", gamePanel.tileSize, gamePanel.tileSize);
-        down1 = setup("/monster/robot_cube_down_1", gamePanel.tileSize, gamePanel.tileSize);
-        down2 = setup("/monster/robot_cube_down_2", gamePanel.tileSize, gamePanel.tileSize);
-        left1 = setup("/monster/robot_cube_down_1", gamePanel.tileSize, gamePanel.tileSize);
-        left2 = setup("/monster/robot_cube_down_2", gamePanel.tileSize, gamePanel.tileSize);
-        right1 = setup("/monster/robot_cube_down_1", gamePanel.tileSize, gamePanel.tileSize);
-        right2 = setup("/monster/robot_cube_down_2", gamePanel.tileSize, gamePanel.tileSize);
+        up1 = setup("/monster/nibby_walk_up_1", gamePanel.tileSize, gamePanel.tileSize);
+        up2 = setup("/monster/nibby_walk_up_2", gamePanel.tileSize, gamePanel.tileSize);
+        down1 = setup("/monster/nibby_walk_down_1", gamePanel.tileSize, gamePanel.tileSize);
+        down2 = setup("/monster/nibby_walk_down_2", gamePanel.tileSize, gamePanel.tileSize);
+        left1 = setup("/monster/nibby_walk_left_1", gamePanel.tileSize, gamePanel.tileSize);
+        left2 = setup("/monster/nibby_walk_left_2", gamePanel.tileSize, gamePanel.tileSize);
+        right1 = setup("/monster/nibby_walk_right_1", gamePanel.tileSize, gamePanel.tileSize);
+        right2 = setup("/monster/nibby_walk_right_2", gamePanel.tileSize, gamePanel.tileSize);
     }
 
     public void setAction() { // Monster simple ai algorithm
 
-        if (onPath) { 
+        // if (onPath) { 
 
-            // Check if it stops chasing
-            checkStopChasingOrNot(gamePanel.player, 15, 100);
+        //     // Check if it stops chasing
+        //     checkStopChasingOrNot(gamePanel.player, 15, 100);
 
-            // Search the direction to go
-            searchPath(getGoalCol(gamePanel.player), getGoalRow(gamePanel.player), "any");
+        //     // Search the direction to go
+        //     searchPath(getGoalCol(gamePanel.player), getGoalRow(gamePanel.player));
             
-        } else {
+        // } else {
 
-            // Check if it starts chasing
-            checkStartChasingOrNot(gamePanel.player, 5, 100);
+        //     // Check if it starts chasing
+        //     checkStartChasingOrNot(gamePanel.player, 5, 100);
 
             // Get a random direction
             getRandomDirection(60);
 
-        }
+        // }
 
     }
 
     public void damageReaction() {
         actionLockCounter = 0;
-        // direction = gamePanel.player.direction;
-        onPath = true;
+        direction = gamePanel.player.direction;
+        // onPath = true;
     }
 
     public void checkDrop() {
@@ -91,5 +90,4 @@ public class MON_RobotCube extends Entity {
         if (i >= 75 && i < 100) dropItem(new OBJ_Mana_Crystal(gamePanel));
 
     }
-    
 }

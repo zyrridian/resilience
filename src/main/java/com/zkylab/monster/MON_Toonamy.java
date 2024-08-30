@@ -9,25 +9,24 @@ import com.zkylab.object.OBJ_Heart;
 import com.zkylab.object.OBJ_Mana_Crystal;
 import com.zkylab.object.OBJ_Rock;
 
-public class MON_RobotBrown extends Entity {
-
+public class MON_Toonamy extends Entity {
     GamePanel gamePanel;
 
-    public MON_RobotBrown(GamePanel gamePanel) {
+    public MON_Toonamy(GamePanel gamePanel) {
 
         super(gamePanel);
 
         this.gamePanel = gamePanel;
 
         type = type_monster;
-        name = "Robot Brown";
-        defaultSpeed = 2;
+        name = "Toonamy";
+        defaultSpeed = 1;
         speed = defaultSpeed;
-        maxLife = 30;
+        maxLife = 7;
         life = maxLife;
-        attack = 5;
-        defense = 0;
-        exp = 20;
+        attack = 1;
+        defense = 1;
+        exp = 5;
         projectile = new OBJ_Rock(gamePanel);
 
         solidArea.x = 9;
@@ -38,23 +37,23 @@ public class MON_RobotBrown extends Entity {
         solidAreaDefaultY = solidArea.y;
 
         getImage();
-        
+
     }
 
     public void getImage() {
-        up1 = setup("/monster/robot_brown_down_1", gamePanel.tileSize, gamePanel.tileSize);
-        up2 = setup("/monster/robot_brown_down_2", gamePanel.tileSize, gamePanel.tileSize);
-        down1 = setup("/monster/robot_brown_down_1", gamePanel.tileSize, gamePanel.tileSize);
-        down2 = setup("/monster/robot_brown_down_2", gamePanel.tileSize, gamePanel.tileSize);
-        left1 = setup("/monster/robot_brown_down_1", gamePanel.tileSize, gamePanel.tileSize);
-        left2 = setup("/monster/robot_brown_down_2", gamePanel.tileSize, gamePanel.tileSize);
-        right1 = setup("/monster/robot_brown_down_1", gamePanel.tileSize, gamePanel.tileSize);
-        right2 = setup("/monster/robot_brown_down_2", gamePanel.tileSize, gamePanel.tileSize);
+        up1 = setup("/monster/toonamy_walk_up_1", gamePanel.tileSize, gamePanel.tileSize);
+        up2 = setup("/monster/toonamy_walk_up_2", gamePanel.tileSize, gamePanel.tileSize);
+        down1 = setup("/monster/toonamy_walk_down_1", gamePanel.tileSize, gamePanel.tileSize);
+        down2 = setup("/monster/toonamy_walk_down_2", gamePanel.tileSize, gamePanel.tileSize);
+        left1 = setup("/monster/toonamy_walk_left_1", gamePanel.tileSize, gamePanel.tileSize);
+        left2 = setup("/monster/toonamy_walk_left_2", gamePanel.tileSize, gamePanel.tileSize);
+        right1 = setup("/monster/toonamy_walk_right_1", gamePanel.tileSize, gamePanel.tileSize);
+        right2 = setup("/monster/toonamy_walk_right_2", gamePanel.tileSize, gamePanel.tileSize);
     }
 
     public void setAction() { // Monster simple ai algorithm
 
-        if (onPath) { 
+        if (onPath) {
 
             // Check if it stops chasing
             checkStopChasingOrNot(gamePanel.player, 15, 100);
@@ -62,16 +61,13 @@ public class MON_RobotBrown extends Entity {
             // Search the direction to go
             searchPath(getGoalCol(gamePanel.player), getGoalRow(gamePanel.player), "any");
 
-            // Check if it shoots a projectile
-            checkShootOrNot(200, 30);
-            
         } else {
 
             // Check if it starts chasing
             checkStartChasingOrNot(gamePanel.player, 5, 100);
 
             // Get a random direction
-            getRandomDirection(120);
+            getRandomDirection(60);
 
         }
 
@@ -84,15 +80,17 @@ public class MON_RobotBrown extends Entity {
     }
 
     public void checkDrop() {
-        
+
         // Cast a die
         int i = new Random().nextInt(100) + 1;
 
         // Set the monster drop
-        if (i < 50) dropItem(new OBJ_Coin_Bronze(gamePanel));
-        if (i >= 50 && i < 75) dropItem(new OBJ_Heart(gamePanel));
-        if (i >= 75 && i < 100) dropItem(new OBJ_Mana_Crystal(gamePanel));
+        if (i < 50)
+            dropItem(new OBJ_Coin_Bronze(gamePanel));
+        if (i >= 50 && i < 75)
+            dropItem(new OBJ_Heart(gamePanel));
+        if (i >= 75 && i < 100)
+            dropItem(new OBJ_Mana_Crystal(gamePanel));
 
     }
-    
 }

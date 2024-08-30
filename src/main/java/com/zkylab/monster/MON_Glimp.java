@@ -9,18 +9,17 @@ import com.zkylab.object.OBJ_Heart;
 import com.zkylab.object.OBJ_Mana_Crystal;
 import com.zkylab.object.OBJ_Rock;
 
-public class MON_RobotBrown extends Entity {
-
+public class MON_Glimp extends Entity{
     GamePanel gamePanel;
 
-    public MON_RobotBrown(GamePanel gamePanel) {
+    public MON_Glimp(GamePanel gamePanel) {
 
         super(gamePanel);
 
         this.gamePanel = gamePanel;
 
         type = type_monster;
-        name = "Robot Brown";
+        name = "Glimp";
         defaultSpeed = 2;
         speed = defaultSpeed;
         maxLife = 30;
@@ -42,14 +41,14 @@ public class MON_RobotBrown extends Entity {
     }
 
     public void getImage() {
-        up1 = setup("/monster/robot_brown_down_1", gamePanel.tileSize, gamePanel.tileSize);
-        up2 = setup("/monster/robot_brown_down_2", gamePanel.tileSize, gamePanel.tileSize);
-        down1 = setup("/monster/robot_brown_down_1", gamePanel.tileSize, gamePanel.tileSize);
-        down2 = setup("/monster/robot_brown_down_2", gamePanel.tileSize, gamePanel.tileSize);
-        left1 = setup("/monster/robot_brown_down_1", gamePanel.tileSize, gamePanel.tileSize);
-        left2 = setup("/monster/robot_brown_down_2", gamePanel.tileSize, gamePanel.tileSize);
-        right1 = setup("/monster/robot_brown_down_1", gamePanel.tileSize, gamePanel.tileSize);
-        right2 = setup("/monster/robot_brown_down_2", gamePanel.tileSize, gamePanel.tileSize);
+        up1 = setup("/monster/glimp_walk_up_1", gamePanel.tileSize, gamePanel.tileSize);
+        up2 = setup("/monster/glimp_walk_up_2", gamePanel.tileSize, gamePanel.tileSize);
+        down1 = setup("/monster/glimp_walk_down_1", gamePanel.tileSize, gamePanel.tileSize);
+        down2 = setup("/monster/glimp_walk_down_2", gamePanel.tileSize, gamePanel.tileSize);
+        left1 = setup("/monster/glimp_walk_left_1", gamePanel.tileSize, gamePanel.tileSize);
+        left2 = setup("/monster/glimp_walk_left_2", gamePanel.tileSize, gamePanel.tileSize);
+        right1 = setup("/monster/glimp_walk_right_1", gamePanel.tileSize, gamePanel.tileSize);
+        right2 = setup("/monster/glimp_walk_right_2", gamePanel.tileSize, gamePanel.tileSize);
     }
 
     public void setAction() { // Monster simple ai algorithm
@@ -94,5 +93,4 @@ public class MON_RobotBrown extends Entity {
         if (i >= 75 && i < 100) dropItem(new OBJ_Mana_Crystal(gamePanel));
 
     }
-    
 }
