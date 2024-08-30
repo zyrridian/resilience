@@ -1,15 +1,18 @@
-package com.zkylab.entity;
+package com.zkylab.entity.old;
 
 import java.util.Random;
 
 import com.zkylab.common.GamePanel;
+import com.zkylab.entity.Entity;
 
 public class NPC_Red extends Entity {
 
     public static final String npcName = "Grandmaster";
+    GamePanel gamePanel;
 
     public NPC_Red(GamePanel gamePanel) {
         super(gamePanel);
+        this.gamePanel = gamePanel;
 
         name = npcName;
         direction = "down";
@@ -103,11 +106,11 @@ public class NPC_Red extends Entity {
             // int goalRow = 9;
             
             // NPC path follow player
-            int goalCol = (gamePanel.player.worldX + gamePanel.player.solidArea.x) / gamePanel.tileSize;
-            int goalRow = (gamePanel.player.worldY + gamePanel.player.solidArea.y) / gamePanel.tileSize;
-            // if (nextCol == goalCol && nextRow == goalRow) onPath = false;
+            // int goalCol = (gamePanel.player.worldX + gamePanel.player.solidArea.x) / gamePanel.tileSize;
+            // int goalRow = (gamePanel.player.worldY + gamePanel.player.solidArea.y) / gamePanel.tileSize;
+            // // if (nextCol == goalCol && nextRow == goalRow) onPath = false;
 
-            searchPath(goalCol, goalRow);
+            // searchPath(goalCol, goalRow);
         } else {
             actionLockCounter++;
             if (actionLockCounter == 120) { // Giving delay 2 second every movement

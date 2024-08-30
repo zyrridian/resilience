@@ -62,7 +62,7 @@ public class PET_Dog extends Entity {
             // if (nextCol == goalCol && nextRow == goalRow) onPath = false;
 
 
-            searchPath(goalCol, goalRow);
+            searchPath(goalCol, goalRow, "any");
 
         } else {
 

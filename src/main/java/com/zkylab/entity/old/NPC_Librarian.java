@@ -1,13 +1,18 @@
-package com.zkylab.entity;
+package com.zkylab.entity.old;
 
 import com.zkylab.common.GamePanel;
+import com.zkylab.data.Progress;
+import com.zkylab.entity.Entity;
+import com.zkylab.object.OBJ_Cloud_Concern;
 
 public class NPC_Librarian extends Entity {
 
     public static final String npcName = "Librarian";
+    GamePanel gamePanel;
 
     public NPC_Librarian(GamePanel gamePanel) {
         super(gamePanel);
+        this.gamePanel = gamePanel;
 
         name = npcName;
         direction = "down";
@@ -69,18 +74,19 @@ public class NPC_Librarian extends Entity {
     public void setAction() {
 
         if (onPath) {
-            
+
             // NPC path with goal
             // int goalCol = 12;
             // int goalRow = 9;
-            
+
             // NPC path follow player
-            int goalCol = (gamePanel.player.worldX + gamePanel.player.solidArea.x) / gamePanel.tileSize;
-            int goalRow = (gamePanel.player.worldY + gamePanel.player.solidArea.y) / gamePanel.tileSize;
-            // if (nextCol == goalCol && nextRow == goalRow) onPath = false;
+            // int goalCol = (gamePanel.player.worldX + gamePanel.player.solidArea.x) /
+            // gamePanel.tileSize;
+            // int goalRow = (gamePanel.player.worldY + gamePanel.player.solidArea.y) /
+            // gamePanel.tileSize;
+            // // if (nextCol == goalCol && nextRow == goalRow) onPath = false;
 
-
-            searchPath(goalCol, goalRow);
+            // searchPath(goalCol, goalRow);
 
         } else {
 
@@ -88,23 +94,34 @@ public class NPC_Librarian extends Entity {
 
             // if (actionLockCounter == 120) { // Giving delay 2 second every movement
 
-            //     Random random = new Random();
-            //     int i = random.nextInt(100) + 1; // pick up a number from 1 to 100
-        
-            //     if (i <= 25) direction = "up";
-            //     if (i > 25 && i <= 50) direction = "down";
-            //     if (i > 50 && i <= 75) direction = "left";
-            //     if (i > 75 && i <= 100) direction = "right";
-                
-            //     actionLockCounter = 0;
-                
+            // Random random = new Random();
+            // int i = random.nextInt(100) + 1; // pick up a number from 1 to 100
+
+            // if (i <= 25) direction = "up";
+            // if (i > 25 && i <= 50) direction = "down";
+            // if (i > 50 && i <= 75) direction = "left";
+            // if (i > 75 && i <= 100) direction = "right";
+
+            // actionLockCounter = 0;
+
             // }
 
         }
-        
+
     }
 
     public void speak() {
+        // remove cloud
+        if (Progress.cutsceneWaterFinished) {
+            for (int i = 0; i < gamePanel.obj.length; i++) {
+                if (gamePanel.obj[gamePanel.currentMap][i] != null
+                        && gamePanel.obj[gamePanel.currentMap][i].name.equals(OBJ_Cloud_Concern.objName)) {
+                    gamePanel.obj[gamePanel.currentMap][i] = null;
+                    break;
+                }
+            }
+        }
+
         facePlayer();
         startDialogue(this, dialogueSet);
         dialogueSet++;
@@ -113,5 +130,5 @@ public class NPC_Librarian extends Entity {
             dialogueSet--; // Dialogue will be stuck in the end state
         }
     }
-    
+
 }

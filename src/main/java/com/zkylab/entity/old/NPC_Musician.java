@@ -1,13 +1,16 @@
-package com.zkylab.entity;
+package com.zkylab.entity.old;
 
 import com.zkylab.common.GamePanel;
+import com.zkylab.entity.Entity;
 
 public class NPC_Musician extends Entity {
 
     public static final String npcName = "Musician";
+    GamePanel gamePanel;
 
     public NPC_Musician(GamePanel gamePanel) {
         super(gamePanel);
+        this.gamePanel = gamePanel;
 
         name = npcName;
         direction = "right";
@@ -78,12 +81,12 @@ public class NPC_Musician extends Entity {
             // int goalRow = 9;
             
             // NPC path follow player
-            int goalCol = (gamePanel.player.worldX + gamePanel.player.solidArea.x) / gamePanel.tileSize;
-            int goalRow = (gamePanel.player.worldY + gamePanel.player.solidArea.y) / gamePanel.tileSize;
-            // if (nextCol == goalCol && nextRow == goalRow) onPath = false;
+            // int goalCol = (gamePanel.player.worldX + gamePanel.player.solidArea.x) / gamePanel.tileSize;
+            // int goalRow = (gamePanel.player.worldY + gamePanel.player.solidArea.y) / gamePanel.tileSize;
+            // // if (nextCol == goalCol && nextRow == goalRow) onPath = false;
 
 
-            searchPath(goalCol, goalRow);
+            // searchPath(goalCol, goalRow);
 
         } else {
 
