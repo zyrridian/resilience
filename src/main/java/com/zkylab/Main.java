@@ -52,7 +52,7 @@ public class Main {
      * Sets the icon image for the game window.
      */
     public void setIcon() {
-        ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("player/mc_walk_down_1.png"));
+        ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("player/arjuna_base_walk_down_1.png"));
         window.setIconImage(icon.getImage());
     }
 }

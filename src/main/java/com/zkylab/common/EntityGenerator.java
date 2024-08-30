@@ -3,7 +3,9 @@ package com.zkylab.common;
 import com.zkylab.entity.Entity;
 import com.zkylab.object.OBJ_Axe;
 import com.zkylab.object.OBJ_Boots;
+import com.zkylab.object.OBJ_Bread;
 import com.zkylab.object.OBJ_Chest;
+import com.zkylab.object.OBJ_Cloud_Concern;
 import com.zkylab.object.OBJ_Coin_Bronze;
 import com.zkylab.object.OBJ_Coin_Red;
 import com.zkylab.object.OBJ_Door;
@@ -23,6 +25,7 @@ import com.zkylab.object.OBJ_Shield_Normal;
 import com.zkylab.object.OBJ_Sword_Normal;
 import com.zkylab.object.OBJ_Sword_Super;
 import com.zkylab.object.OBJ_Tent;
+import com.zkylab.object.OBJ_Water;
 
 public class EntityGenerator {
 
@@ -57,6 +60,9 @@ public class EntityGenerator {
             case OBJ_Sword_Super.objName: obj = new OBJ_Sword_Super(gamePanel); break;
             case OBJ_Sword_God.objName: obj = new OBJ_Sword_God(gamePanel); break;
             case OBJ_Tent.objName: obj = new OBJ_Tent(gamePanel); break;
+            case OBJ_Cloud_Concern.objName: obj = new OBJ_Cloud_Concern(gamePanel); break;
+            case OBJ_Water.objName: obj = new OBJ_Water(gamePanel); break;
+            case OBJ_Bread.objName: obj = new OBJ_Bread(gamePanel); break;
         }
         return obj;
     }

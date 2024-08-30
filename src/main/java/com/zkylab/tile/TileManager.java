@@ -59,22 +59,14 @@ public class TileManager {
             System.out.println("Exception!");
         }
 
-        loadMap("/maps/house.txt", 0);
-        loadMap("/maps/quake.txt", 1);
-        // loadMap("/maps/kota03.txt", 2);
-        // loadMap("/maps/kota04.txt", 3);
-        // loadMap("/maps/kota05.txt", 4);
-        // loadMap("/maps/utama.txt", 5);
-        // loadMap("/maps/dapur.txt", 6);
-        // loadMap("/maps/perpustakaan.txt", 7);
-        // loadMap("/maps/studio01.txt", 8);
-        // loadMap("/maps/perpustakaan.txt", 9);
-        // loadMap("/maps/monster01.txt", 10);
-        // loadMap("/maps/monster02.txt", 11);
-        // loadMap("/maps/monster03.txt", 12);
-        // loadMap("/maps/boss01.txt", 13);
-        // loadMap("/maps/boss02.txt", 14);
-
+        loadMap("/maps/house.txt", GamePanel.MAP_HOUSE);
+        loadMap("/maps/quake.txt", GamePanel.MAP_TOWN);
+        loadMap("/maps/house-livingroom.txt", GamePanel.MAP_LIVING_ROOM);
+        // loadMap("/maps/challenge.txt", GamePanel.MAP_CHALLENGE);
+        loadMap("/maps/road.txt", GamePanel.MAP_ROAD);
+        loadMap("/maps/gedung01.txt", GamePanel.MAP_TOWER_1);
+        loadMap("/maps/gedung02.txt", GamePanel.MAP_TOWER_2);
+        loadMap("/maps/gedung03.txt", GamePanel.MAP_TOWER_3);
     }
 
     public void getTileImage() {
