@@ -584,6 +584,93 @@ public class UI {
             y = (int) (gamePanel.tileSize * 1.25);
             g2.drawString(text, x, y);
 
+        } else if (titleScreenState == 4) { // Title screen prolog 1
+
+            // Set background
+            g2.setColor(new Color(0, 0, 0));
+            g2.fillRect(0, 0, gamePanel.screenWidth, gamePanel.screenHeight);
+
+            // Set font and color
+            g2.setFont(g2.getFont().deriveFont(Font.PLAIN, 24F));
+            g2.setColor(Color.white);
+
+            // ========== Prolog text ========== //
+            String text = "Di sebuah desa kecil yang damai,";
+            int x = getXforCenteredText(text);
+            int y = gamePanel.tileSize * 2;
+            g2.drawString(text, x, y);
+
+            text = "hiduplah seorang pemuda bernama Arjuna";
+            x = getXforCenteredText(text);
+            y += gamePanel.tileSize;
+            g2.drawString(text, x, y);
+
+            text = "yang lebih suka tidur siang daripada menyelamatkan dunia.";
+            x = getXforCenteredText(text);
+            y += gamePanel.tileSize;
+            g2.drawString(text, x, y);
+
+            text = "Setiap pagi, dia terbangun dengan sinar matahari yang masuk";
+            x = getXforCenteredText(text);
+            y += gamePanel.tileSize * 2;
+            g2.drawString(text, x, y);
+
+            text = "melalui jendela rumahnya yang sederhana.";
+            x = getXforCenteredText(text);
+            y += gamePanel.tileSize;
+            g2.drawString(text, x, y);
+
+            text = "Hari ini, seperti hari-hari lainnya, dia berencana untuk";
+            x = getXforCenteredText(text);
+            y += gamePanel.tileSize * 2;
+            g2.drawString(text, x, y);
+
+            text = "tidak melakukan apa-apa, dan dia sangat berbakat dalam hal itu.";
+            x = getXforCenteredText(text);
+            y += gamePanel.tileSize;
+            g2.drawString(text, x, y);
+
+        } else if (titleScreenState == 5) { // Title screen prolog 2
+
+            // Set background
+            g2.setColor(new Color(0, 0, 0));
+            g2.fillRect(0, 0, gamePanel.screenWidth, gamePanel.screenHeight);
+
+            // Set font and color
+            g2.setFont(g2.getFont().deriveFont(Font.PLAIN, 24F));
+            g2.setColor(Color.white);
+
+            // ========== Prolog text ========== //
+            String text = "Namun, takdir tampaknya bosan";
+            int x = getXforCenteredText(text);
+            int y = gamePanel.tileSize * 3;
+            g2.drawString(text, x, y);
+
+            text = "dengan rutinitasnya.";
+            x = getXforCenteredText(text);
+            y += gamePanel.tileSize;
+            g2.drawString(text, x, y);
+
+            text = "Tanpa peringatan";
+            x = getXforCenteredText(text);
+            y += gamePanel.tileSize * 2;
+            g2.drawString(text, x, y);
+
+            text = "bumi mulai bergemuruh,";
+            x = getXforCenteredText(text);
+            y += gamePanel.tileSize;
+            g2.drawString(text, x, y);
+
+            text = "seakan ada raksasa yang sedang";
+            x = getXforCenteredText(text);
+            y += gamePanel.tileSize * 2;
+            g2.drawString(text, x, y);
+
+            text = "mencari sandal hilang di bawah tanah.";
+            x = getXforCenteredText(text);
+            y += gamePanel.tileSize;
+            g2.drawString(text, x, y);
+
         } else if (titleScreenState == 99) {
             g2.setColor(new Color(0, 0, 0));
             g2.fillRect(0, 0, gamePanel.screenWidth, gamePanel.screenHeight);
@@ -684,7 +771,7 @@ public class UI {
             // Display text letter by letter
             char characters[] = npc.dialogues[npc.dialogueSet][npc.dialogueIndex].toCharArray();
             if (charIndex < characters.length) {
-                gamePanel.playSoundEffect(18);
+                gamePanel.playSoundEffect(GamePanel.SFX_SPEAK);
                 String text = String.valueOf(characters[charIndex]);
                 combinedText = combinedText + text;
                 currentDialogue = combinedText;
@@ -1234,11 +1321,11 @@ public class UI {
             if (gamePanel.keyHandler.enterPressed) {
                 subState = 0;
                 if (gamePanel.currentArea == GamePanel.OUTSIDE_AREA) {
-                    gamePanel.stopMusic(22);
+                    gamePanel.stopMusic(GamePanel.MUSIC_OUTDOOR);
                 } else if (gamePanel.currentArea == GamePanel.INDOOR_AREA) {
-                    gamePanel.stopMusic(23);
+                    gamePanel.stopMusic(GamePanel.MUSIC_INDOOR);
                 } else if (gamePanel.currentArea == GamePanel.DUNGEON_AREA) {
-                    gamePanel.stopMusic(7);
+                    gamePanel.stopMusic(GamePanel.MUSIC_DUNGEON);
                 }
                 titleScreenState = 1;
                 gamePanel.gameState = GamePanel.TITLE_STATE;

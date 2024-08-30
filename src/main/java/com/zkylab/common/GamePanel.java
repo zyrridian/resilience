@@ -41,7 +41,16 @@ public class GamePanel extends JPanel implements Runnable {
 
     // World Settings
     public final int maxMap = 20;
-    public int currentMap = 0;
+    // public int currentMap = MAP_LIVING_ROOM;
+    public int currentMap = MAP_TOWN;
+    public final static int MAP_HOUSE = 0;
+    public final static int MAP_LIVING_ROOM = 1;
+    public final static int MAP_TOWN = 2;
+    // public final static int MAP_CHALLENGE = 3;
+    public final static int MAP_ROAD = 3;
+    public final static int MAP_TOWER_1 = 4;
+    public final static int MAP_TOWER_2 = 5;
+    public final static int MAP_TOWER_3 = 6;
     public int maxWorldCol;
     public int maxWorldRow;
 
@@ -106,6 +115,30 @@ public class GamePanel extends JPanel implements Runnable {
     public final static int INDOOR_AREA = 51;
     public final static int DUNGEON_AREA = 52;
 
+    // Music Constants
+    public final static int MUSIC_INDOOR = 0;
+    public final static int MUSIC_OUTDOOR = 1;
+    public final static int MUSIC_DUNGEON = 2;
+    public final static int SFX_EARTHQUAKE = 50;
+    public final static int SFX_POWER_UP = 51;
+    public final static int SFX_SWORD_SLASH = 52;
+    public final static int SFX_COIN = 53;
+    public final static int SFX_UNLOCK = 54;
+    public final static int SFX_FANFARE = 55;
+    public final static int SFX_CURSOR = 56;
+    public final static int SFX_HIT_MONSTER = 57;
+    public final static int SFX_RECEIVE_DAMAGE = 58;
+    public final static int SFX_BURNING = 59;
+    public final static int SFX_CUT_TREE = 60;
+    public final static int SFX_BLOCKED = 61;
+    public final static int SFX_PARRY = 62;
+    public final static int SFX_SPEAK = 63;
+    public final static int SFX_DEAD = 64;
+    public final static int SFX_GAME_OVER = 65;
+    public final static int SFX_STAIRS = 66;
+    public final static int SFX_SLEEP = 67;
+
+
     // Others
     public boolean bossBattleOn = false;
     public int currentMusicIndex = 0;
@@ -130,11 +163,10 @@ public class GamePanel extends JPanel implements Runnable {
         assetSetter.setNPC();
         assetSetter.setMonster();
         assetSetter.setInteractiveTile();
-        // playMusic(6);
         eManager.setup();
 
         gameState = TITLE_STATE;
-        currentArea = OUTSIDE_AREA;
+        currentArea = INDOOR_AREA;
 
         tempScreen = new BufferedImage(screenWidth, screenHeight, BufferedImage.TYPE_INT_ARGB);
         g2 = (Graphics2D) tempScreen.getGraphics();
@@ -151,7 +183,7 @@ public class GamePanel extends JPanel implements Runnable {
      */
     public void resetGame(boolean restart) {
         // stopMusic();
-        currentArea = OUTSIDE_AREA;
+        currentArea = INDOOR_AREA;
         removeTempEntity();
         bossBattleOn = false;
         player.restoreStatus();
@@ -224,30 +256,60 @@ public class GamePanel extends JPanel implements Runnable {
             eManager.update(); // Upload lightning
         }
         if (gameState == CUTSCENE_STATE) {
+            // // If collision is false, player can move
+            // if (!player.collisionOn) {
+            // switch (player.direction) {
+            // case "up":
+            // player.worldY -= player.speed;
+            // break;
+            // case "down":
+            // player.worldY += player.speed;
+            // break;
+            // case "left":
+            // player.worldX -= player.speed;
+            // break;
+            // case "right":
+            // player.worldX += player.speed;
+            // break;
+            // }
+            // }
+
+            // // Change walking image every 10 frames
+            // player.spriteCounter++;
+            // if (player.spriteCounter > 12) {
+            // if (player.spriteNumber == 2 || player.spriteNumber == 1) {
+            // player.spriteNumber = 3;
+            // } else if (player.spriteNumber == 3 || player.spriteNumber == 1) {
+            // player.spriteNumber = 2;
+            // }
+            // player.spriteCounter = 0;
+            // }
+
             // NPC
-            for (int i = 0; i < npc[1].length; i++) {
-                if (npc[currentMap][i] != null) {
-                    npc[currentMap][i].setAction();
-                    npc[currentMap][i].checkCollision();
-                    // If collision is false, player can move
-                    if (!npc[currentMap][i].collisionOn) {
-                        switch (npc[currentMap][i].direction) {
-                            case "up":
-                                npc[currentMap][i].worldY -= npc[currentMap][i].speed;
-                                break;
-                            case "down":
-                                npc[currentMap][i].worldY += npc[currentMap][i].speed;
-                                break;
-                            case "left":
-                                npc[currentMap][i].worldX -= npc[currentMap][i].speed;
-                                break;
-                            case "right":
-                                npc[currentMap][i].worldX += npc[currentMap][i].speed;
-                                break;
-                        }
-                    }
-                }
-            }
+            // for (int i = 0; i < npc[1].length; i++) {
+            // if (npc[currentMap][i] != null) {
+            // npc[currentMap][i].setAction();
+            // npc[currentMap][i].checkCollision();
+            // // If collision is false, player can move
+            // if (!npc[currentMap][i].collisionOn) {
+            // switch (npc[currentMap][i].direction) {
+            // case "up":
+            // npc[currentMap][i].worldY -= npc[currentMap][i].speed;
+            // break;
+            // case "down":
+            // npc[currentMap][i].worldY += npc[currentMap][i].speed;
+            // break;
+            // case "left":
+            // npc[currentMap][i].worldX -= npc[currentMap][i].speed;
+            // break;
+            // case "right":
+            // npc[currentMap][i].worldX += npc[currentMap][i].speed;
+            // break;
+            // }
+            // }
+            // }
+            // }
+            updateEntities();
         }
     }
 
@@ -482,20 +544,20 @@ public class GamePanel extends JPanel implements Runnable {
         if (nextArea != currentArea) {
             // Stop music
             if (currentArea == OUTSIDE_AREA) {
-                stopMusic(22);
+                stopMusic(MUSIC_OUTDOOR);
             } else if (currentArea == INDOOR_AREA) {
-                stopMusic(23);
+                stopMusic(MUSIC_INDOOR);
             } else if (currentArea == DUNGEON_AREA) {
-                stopMusic(7);
+                stopMusic(MUSIC_DUNGEON);
             }
 
             // Play new music
             if (nextArea == OUTSIDE_AREA)
-                playMusic(22);
+                playMusic(MUSIC_OUTDOOR);
             if (nextArea == INDOOR_AREA)
-                playMusic(23);
+                playMusic(MUSIC_INDOOR);
             if (nextArea == DUNGEON_AREA)
-                playMusic(7);
+                playMusic(MUSIC_DUNGEON);
             assetSetter.setNPC();
         }
         currentArea = nextArea;

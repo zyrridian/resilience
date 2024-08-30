@@ -8,6 +8,7 @@ import java.util.Random;
 
 import javax.imageio.ImageIO;
 
+import com.zkylab.common.CutsceneManager;
 import com.zkylab.common.GamePanel;
 import com.zkylab.common.UtilityTool;
 
@@ -26,6 +27,7 @@ public class Entity {
     // Collision Areas
     public Rectangle solidArea = new Rectangle(0, 0, 48, 48);
     public Rectangle attackArea = new Rectangle(0, 0, 0, 0);
+    public CutsceneManager cutsceneManager;
     public int solidAreaDefaultX, solidAreaDefaultY;
     public boolean collision = false;
 
@@ -60,6 +62,7 @@ public class Entity {
     public boolean opened = false;
     public boolean inRage = false;
     public boolean sleep = false;
+    public boolean isNPC = false;
     public boolean drawing = true; // to stop drawing player when camera moving in cutscene
     public Entity loot;
 
@@ -572,16 +575,16 @@ public class Entity {
                 // Parry - success if guard pressed 10 frame before monster attack
                 if (gamePanel.player.guardCounter < 10) {
                     damage = 0;
-                    gamePanel.playSoundEffect(17);
+                    gamePanel.playSoundEffect(GamePanel.SFX_PARRY);
                     setKnockBack(this, gamePanel.player, knockBackPower);
                     offBalance = true;
                     spriteCounter = -60; // temporary stun effect
                 } else { // Normal attack
                     damage /= 3;
-                    gamePanel.playSoundEffect(16);
+                    gamePanel.playSoundEffect(GamePanel.SFX_BLOCKED);
                 }
             } else {
-                gamePanel.playSoundEffect(9);
+                gamePanel.playSoundEffect(GamePanel.SFX_RECEIVE_DAMAGE);
                 if (damage < 1) {
                     damage = 1;
                 }
@@ -863,7 +866,7 @@ public class Entity {
         return image;
     }
 
-    public void searchPath(int goalCol, int goalRow) {
+    public void searchPath(int goalCol, int goalRow, String targetDirection) {
 
         int startCol = (worldX + solidArea.x) / gamePanel.tileSize;
         int startRow = (worldY + solidArea.y) / gamePanel.tileSize;
@@ -922,8 +925,13 @@ public class Entity {
             // user)
             int nextCol = gamePanel.pathFinder.pathList.get(0).col;
             int nextRow = gamePanel.pathFinder.pathList.get(0).row;
-            if (nextCol == goalCol && nextRow == goalRow)
+            if (nextCol == goalCol && nextRow == goalRow) {
                 onPath = false;
+                if (gamePanel.gameState == GamePanel.CUTSCENE_STATE) {
+                    direction = targetDirection;
+                    gamePanel.cManager.scenePhase++;
+                }
+            }
 
         }
 
@@ -958,7 +966,7 @@ public class Entity {
         for (int i = 0; i < target[1].length; i++) {
             if (target[gamePanel.currentMap][i] != null) {
                 if (target[gamePanel.currentMap][i].getCol() == col && target[gamePanel.currentMap][i].getRow() == row
-                        && target[gamePanel.currentMap][i].name.equals(targetName)) {
+                        && (target[gamePanel.currentMap][i].name.equals(targetName) || target[gamePanel.currentMap][i].isNPC)) {
                     index = i;
                     break;
                 }
