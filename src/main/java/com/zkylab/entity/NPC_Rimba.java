@@ -51,16 +51,18 @@ public class NPC_Rimba extends Entity {
     }
 
     public void setDialogue() {
-        dialogues[0][0] = "!";
-        dialogues[1][0] = "Wah, akhirnya keluar juga!";
-        dialogues[2][0] = "Kupikir kau sudah berubah jadi tanaman pot\nkarena warna hijau itu.";
-        dialogues[2][1] = "Jangan sampai aku harus menyiram dan merawatmu\nseperti pohon di kebun belakang!";
-        dialogues[2][2] = "Tapi lihatlah, Nak. Seluruh kota berantakan,\nsementara rumahmu cuma bergoyang sedikit.\nMungkin rumahmu punya jimat anti-gempa... atau\nbisa jadi efek samping dari obat yang kau minum.";
-        dialogues[2][3] = "Namun, aku tahu satu hal pasti, ini bukan gempa\nbiasa. Ada sesuatu yang lebih besar, lebih\nmengerikan di bawah sana... sesuatu yang tak\nbisa kita lihat dengan mata telanjang.";
-        dialogues[2][4] = "Terkadang yang terlihat di permukaan hanyalah\nawal dari bencana yang lebih besar.";
-        dialogues[2][5] = "Ah, aku pasti terdengar seperti orang tua yang\nkebanyakan nonton film horor.";
-        dialogues[2][6] = "Jangan khawatir. Selama kau masih bisa berdiri,\nitu tandanya kau masih kuat. Kau tidak akan\nmenjadi zombie! Mungkin...";
-        dialogues[2][7] = "Pergilah, Nak. Jalani perjalananmu dengan\nhati-hati... dan kalau bisa, jangan tersandung\ndi jalan, ya? Aku tidak punya cukup plester\nuntuk menambal luka di tubuhmu.";
+        dialogues[0][0] = "Hei, kau!";
+        dialogues[0][1] = "Aku sedang memeriksa kondisi pohon-pohon\ndi sekitar sini setelah gempa.";
+        dialogues[0][2] = "Tahu tidak? Pohon-pohon ini mungkin lebih\nkaget daripada kita!";
+        dialogues[1][0] = "Beberapa pohon besar terlihat miring,\nkita harus memastikan mereka tidak roboh.";
+        dialogues[1][1] = "Oh, dan hati-hati dengan ranting jatuh,\nmereka mungkin lebih berbahaya daripada\nmakan siang yang kau lewatkan!";
+        dialogues[2][0] = "Kau butuh bantuan? Coba carikan aku\nbeberapa benih pohon, kita mungkin perlu\nmenanam beberapa lagi.";
+        dialogues[2][1] = "Ingat, pohon adalah penyelamat kita.\nTanpa mereka, kita sudah tersapu angin kencang!";
+        dialogues[3][0] = "Hutan ini mungkin rusak, tapi dengan\nsedikit usaha, kita bisa membuatnya\nlebih kuat dari sebelumnya.";
+        dialogues[4][0] = "Baiklah, aku kembali ke pekerjaanku.\nPastikan tidak ada yang menebang pohon\ndengan sembarangan!";
+        dialogues[5][0] = "Oh, hampir lupa! Jika kau melihat\nhewan liar yang kebingungan, coba laporkan\nke petugas setempat.";
+        dialogues[6][0] = "Kau punya peta? Mungkin ada baiknya\ndiperiksa kembali, jalan setapak mungkin\ntelah berubah.";
+        dialogues[7][0] = "Jangan lupa, hutan ini juga rumah kita.\nMari jaga bersama!";
     }
 
     public void setAction() {

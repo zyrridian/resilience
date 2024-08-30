@@ -51,17 +51,22 @@ public class NPC_Bumi extends Entity {
     }
 
     public void setDialogue() {
-        dialogues[0][0] = "!";
-        dialogues[1][0] = "Wah, akhirnya keluar juga!";
-        dialogues[2][0] = "Kupikir kau sudah berubah jadi tanaman pot\nkarena warna hijau itu.";
-        dialogues[2][1] = "Jangan sampai aku harus menyiram dan merawatmu\nseperti pohon di kebun belakang!";
-        dialogues[2][2] = "Tapi lihatlah, Nak. Seluruh kota berantakan,\nsementara rumahmu cuma bergoyang sedikit.\nMungkin rumahmu punya jimat anti-gempa... atau\nbisa jadi efek samping dari obat yang kau minum.";
-        dialogues[2][3] = "Namun, aku tahu satu hal pasti, ini bukan gempa\nbiasa. Ada sesuatu yang lebih besar, lebih\nmengerikan di bawah sana... sesuatu yang tak\nbisa kita lihat dengan mata telanjang.";
-        dialogues[2][4] = "Terkadang yang terlihat di permukaan hanyalah\nawal dari bencana yang lebih besar.";
-        dialogues[2][5] = "Ah, aku pasti terdengar seperti orang tua yang\nkebanyakan nonton film horor.";
-        dialogues[2][6] = "Jangan khawatir. Selama kau masih bisa berdiri,\nitu tandanya kau masih kuat. Kau tidak akan\nmenjadi zombie! Mungkin...";
-        dialogues[2][7] = "Pergilah, Nak. Jalani perjalananmu dengan\nhati-hati... dan kalau bisa, jangan tersandung\ndi jalan, ya? Aku tidak punya cukup plester\nuntuk menambal luka di tubuhmu.";
+        dialogues[0][0] = "Oh, kau datang pada waktu yang tepat!";
+        dialogues[0][1] = "Aku sedang memeriksa retakan pada batuan\ndi sekitar sini.";
+        dialogues[0][2] = "Gempa ini cukup kuat untuk memecah batuan,\ndan retakan ini bisa memberi tahu kita banyak hal.";
+        dialogues[1][0] = "Tahukah kau? Retakan pada batuan bisa\nmemberi kita petunjuk tentang arah\npergerakan gempa.";
+        dialogues[1][1] = "Ini seperti jejak kaki raksasa di tanah,\nsetiap retakan memiliki cerita tersendiri.";
+        dialogues[2][0] = "Jika kau menemukan batu yang terlihat\nretak atau aneh, bawa padaku.\nAku ingin memeriksanya lebih lanjut.";
+        dialogues[2][1] = "Batuan ini mungkin terlihat keras,\ntapi mereka juga bisa rapuh setelah gempa.";
+        dialogues[3][0] = "Aku juga menemukan beberapa mineral baru\ndi sekitar sini, mungkin ini kesempatan baik\nuntuk belajar lebih banyak tentang bumi kita.";
+        dialogues[4][0] = "Ingat, gempa bukan hanya tentang\ngetaran di tanah, tapi juga bagaimana\nbatuan meresponsnya.";
+        dialogues[4][1] = "Sebenarnya, kita semua adalah bagian\ndari sejarah geologi yang sedang terjadi.";
+        dialogues[5][0] = "Jika kau tertarik, aku bisa mengajarkanmu\nsedikit tentang bagaimana membaca batuan.";
+        dialogues[5][1] = "Ini bukan hanya ilmu, tapi juga seni\nmembaca alam.";
+        dialogues[6][0] = "Baiklah, aku harus kembali bekerja.\nIngat, setiap batu punya cerita yang harus\ndipahami!";
+        dialogues[6][1] = "Sampai jumpa, dan tetap berhati-hati di luar sana!";
     }
+    
 
     public void setAction() {
 

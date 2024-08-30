@@ -51,17 +51,22 @@ public class NPC_Rangga extends Entity {
     }
 
     public void setDialogue() {
-        dialogues[0][0] = "!";
-        dialogues[1][0] = "Wah, akhirnya keluar juga!";
-        dialogues[2][0] = "Kupikir kau sudah berubah jadi tanaman pot\nkarena warna hijau itu.";
-        dialogues[2][1] = "Jangan sampai aku harus menyiram dan merawatmu\nseperti pohon di kebun belakang!";
-        dialogues[2][2] = "Tapi lihatlah, Nak. Seluruh kota berantakan,\nsementara rumahmu cuma bergoyang sedikit.\nMungkin rumahmu punya jimat anti-gempa... atau\nbisa jadi efek samping dari obat yang kau minum.";
-        dialogues[2][3] = "Namun, aku tahu satu hal pasti, ini bukan gempa\nbiasa. Ada sesuatu yang lebih besar, lebih\nmengerikan di bawah sana... sesuatu yang tak\nbisa kita lihat dengan mata telanjang.";
-        dialogues[2][4] = "Terkadang yang terlihat di permukaan hanyalah\nawal dari bencana yang lebih besar.";
-        dialogues[2][5] = "Ah, aku pasti terdengar seperti orang tua yang\nkebanyakan nonton film horor.";
-        dialogues[2][6] = "Jangan khawatir. Selama kau masih bisa berdiri,\nitu tandanya kau masih kuat. Kau tidak akan\nmenjadi zombie! Mungkin...";
-        dialogues[2][7] = "Pergilah, Nak. Jalani perjalananmu dengan\nhati-hati... dan kalau bisa, jangan tersandung\ndi jalan, ya? Aku tidak punya cukup plester\nuntuk menambal luka di tubuhmu.";
+        dialogues[0][0] = "Ah, kau datang tepat waktu!";
+        dialogues[0][1] = "Aku senang melihat semua orang bekerja\ndengan baik setelah gempa ini.";
+        dialogues[1][0] = "Meskipun ini adalah masa yang sulit,\nkita tidak boleh kehilangan fokus.";
+        dialogues[1][1] = "Keamanan dan kesejahteraan semua orang\nadalah prioritas utama kita.";
+        dialogues[2][0] = "Aku sudah menginstruksikan tim untuk\nmemeriksa seluruh bangunan, memastikan\nsemua struktur aman.";
+        dialogues[2][1] = "Jika ada area yang terlihat tidak aman,\nsegera laporkan, kita akan menanganinya\nsecepat mungkin.";
+        dialogues[3][0] = "Kita mungkin telah mengalami guncangan,\ntapi itu tidak boleh menghentikan langkah kita.";
+        dialogues[3][1] = "Kita akan melewati ini bersama-sama,\nseperti yang selalu kita lakukan.";
+        dialogues[4][0] = "Ingat, aku selalu terbuka untuk mendengar\nkekhawatiran atau ide dari kalian semua.";
+        dialogues[4][1] = "Tidak ada yang lebih penting dari\nkeselamatan dan kolaborasi di sini.";
+        dialogues[5][0] = "Oh, dan satu hal lagi, pastikan semua\npegawai telah dievakuasi dengan aman\nsebelum kita mulai bekerja kembali.";
+        dialogues[6][0] = "Jika ada yang membutuhkan bantuan,\nbaik dalam pekerjaan atau hal lain, jangan ragu\nuntuk menyampaikan. Kita adalah satu tim.";
+        dialogues[7][0] = "Sekarang, mari kita lanjutkan. Ada banyak\nhal yang perlu dilakukan, dan aku tahu kita\nbisa melakukannya dengan baik.";
+        dialogues[8][0] = "Terima kasih atas kerja kerasmu.\nKita semua akan bangkit lebih kuat dari ini!";
     }
+    
 
     public void setAction() {
 

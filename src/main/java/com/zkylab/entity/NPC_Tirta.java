@@ -51,16 +51,20 @@ public class NPC_Tirta extends Entity {
     }
 
     public void setDialogue() {
-        dialogues[0][0] = "!";
-        dialogues[1][0] = "Wah, akhirnya keluar juga!";
-        dialogues[2][0] = "Kupikir kau sudah berubah jadi tanaman pot\nkarena warna hijau itu.";
-        dialogues[2][1] = "Jangan sampai aku harus menyiram dan merawatmu\nseperti pohon di kebun belakang!";
-        dialogues[2][2] = "Tapi lihatlah, Nak. Seluruh kota berantakan,\nsementara rumahmu cuma bergoyang sedikit.\nMungkin rumahmu punya jimat anti-gempa... atau\nbisa jadi efek samping dari obat yang kau minum.";
-        dialogues[2][3] = "Namun, aku tahu satu hal pasti, ini bukan gempa\nbiasa. Ada sesuatu yang lebih besar, lebih\nmengerikan di bawah sana... sesuatu yang tak\nbisa kita lihat dengan mata telanjang.";
-        dialogues[2][4] = "Terkadang yang terlihat di permukaan hanyalah\nawal dari bencana yang lebih besar.";
-        dialogues[2][5] = "Ah, aku pasti terdengar seperti orang tua yang\nkebanyakan nonton film horor.";
-        dialogues[2][6] = "Jangan khawatir. Selama kau masih bisa berdiri,\nitu tandanya kau masih kuat. Kau tidak akan\nmenjadi zombie! Mungkin...";
-        dialogues[2][7] = "Pergilah, Nak. Jalani perjalananmu dengan\nhati-hati... dan kalau bisa, jangan tersandung\ndi jalan, ya? Aku tidak punya cukup plester\nuntuk menambal luka di tubuhmu.";
+        dialogues[0][0] = "Oh, hai!";
+        dialogues[0][1] = "Aku sedang memeriksa kondisi air di daerah ini.";
+        dialogues[0][2] = "Gempa ini benar-benar mengubah jalur air,\nkita harus hati-hati!";
+        dialogues[0][3] = "Hmm, siapa sangka air bisa lebih berbahaya\ndari gempa itu sendiri?";
+        dialogues[1][0] = "Tapi tenang, air ini masih aman... Sejauh ini.";
+        dialogues[1][1] = "Kamu butuh air minum? Jangan khawatir,\nini dari sumber yang sudah kuperiksa.";
+        dialogues[2][0] = "Oh, kau ingin tahu lebih banyak tentang air?";
+        dialogues[2][1] = "Kau tahu, air bisa menjadi sahabat atau musuh\ndalam situasi seperti ini.";
+        dialogues[3][0] = "Sekarang, tugasmu adalah memastikan\norang-orang tidak mengambil air dari sumber\nyang terkontaminasi.";
+        dialogues[3][1] = "Dan ingat, jangan berenang di genangan air\npasca gempa, kau tidak akan tahu apa yang\nbersembunyi di bawahnya!";
+        dialogues[4][0] = "Baiklah, aku harus kembali bekerja. Sampai jumpa!";
+        dialogues[5][0] = "Ingat, jika kau melihat sesuatu yang aneh\ndengan air, laporkan padaku segera.";
+        dialogues[6][0] = "Kau kekurangan peralatan? Mungkin\nkau bisa menemukannya di toko di seberang jalan.";
+        dialogues[7][0] = "Sampai nanti, tetaplah berhati-hati!";
     }
 
     public void setAction() {

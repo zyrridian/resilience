@@ -51,17 +51,19 @@ public class NPC_Lestari extends Entity {
     }
 
     public void setDialogue() {
-        dialogues[0][0] = "!";
-        dialogues[1][0] = "Wah, akhirnya keluar juga!";
-        dialogues[2][0] = "Kupikir kau sudah berubah jadi tanaman pot\nkarena warna hijau itu.";
-        dialogues[2][1] = "Jangan sampai aku harus menyiram dan merawatmu\nseperti pohon di kebun belakang!";
-        dialogues[2][2] = "Tapi lihatlah, Nak. Seluruh kota berantakan,\nsementara rumahmu cuma bergoyang sedikit.\nMungkin rumahmu punya jimat anti-gempa... atau\nbisa jadi efek samping dari obat yang kau minum.";
-        dialogues[2][3] = "Namun, aku tahu satu hal pasti, ini bukan gempa\nbiasa. Ada sesuatu yang lebih besar, lebih\nmengerikan di bawah sana... sesuatu yang tak\nbisa kita lihat dengan mata telanjang.";
-        dialogues[2][4] = "Terkadang yang terlihat di permukaan hanyalah\nawal dari bencana yang lebih besar.";
-        dialogues[2][5] = "Ah, aku pasti terdengar seperti orang tua yang\nkebanyakan nonton film horor.";
-        dialogues[2][6] = "Jangan khawatir. Selama kau masih bisa berdiri,\nitu tandanya kau masih kuat. Kau tidak akan\nmenjadi zombie! Mungkin...";
-        dialogues[2][7] = "Pergilah, Nak. Jalani perjalananmu dengan\nhati-hati... dan kalau bisa, jangan tersandung\ndi jalan, ya? Aku tidak punya cukup plester\nuntuk menambal luka di tubuhmu.";
+        dialogues[0][0] = "Oh, hai! Senang melihat ada yang datang\nuntuk memastikan keadaan kami.";
+        dialogues[0][1] = "Desa ini mungkin kecil, tapi kami\npunya semangat yang besar!";
+        dialogues[1][0] = "Gempa tadi cukup kuat, tapi syukurlah\nrumah-rumah di sini masih berdiri kokoh.";
+        dialogues[1][1] = "Orang-orang desa ini sudah terbiasa\nmenghadapi tantangan alam.";
+        dialogues[2][0] = "Tentu saja, ada beberapa kerusakan kecil,\nseperti genteng yang jatuh dan dinding retak,\ntapi itu sudah biasa bagi kami.";
+        dialogues[3][0] = "Hal yang paling mengkhawatirkan\nadalah sumur di desa. Kadang-kadang\ngempa bisa mengubah jalur air bawah tanah.";
+        dialogues[4][0] = "Kami harus memeriksa sumur untuk\nmemastikan airnya tetap bersih dan aman\nuntuk diminum.";
+        dialogues[5][0] = "Selain itu, kami juga harus menjaga\npersediaan makanan. Jika ada ladang yang\nrusak, kami perlu bantuan untuk memulihkannya.";
+        dialogues[6][0] = "Tapi jangan khawatir, dengan kerja sama,\nkami pasti bisa mengatasi semua ini.\nDesa ini sudah melalui banyak hal, dan\nkami selalu bangkit kembali.";
+        dialogues[7][0] = "Jika kau punya waktu, mungkin bisa\nmembantu kami memperbaiki beberapa rumah\natau memeriksa sumur. Setiap bantuan sangat\nberharga bagi kami.";
+        dialogues[8][0] = "Terima kasih sudah datang. Kau selalu\nselamat datang di desa ini. Kami mungkin\ndesa kecil, tapi hati kami besar!";
     }
+    
 
     public void setAction() {
 

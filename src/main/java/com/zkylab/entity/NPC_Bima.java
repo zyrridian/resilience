@@ -51,17 +51,22 @@ public class NPC_Bima extends Entity {
     }
 
     public void setDialogue() {
-        dialogues[0][0] = "!";
-        dialogues[1][0] = "Wah, akhirnya keluar juga!";
-        dialogues[2][0] = "Kupikir kau sudah berubah jadi tanaman pot\nkarena warna hijau itu.";
-        dialogues[2][1] = "Jangan sampai aku harus menyiram dan merawatmu\nseperti pohon di kebun belakang!";
-        dialogues[2][2] = "Tapi lihatlah, Nak. Seluruh kota berantakan,\nsementara rumahmu cuma bergoyang sedikit.\nMungkin rumahmu punya jimat anti-gempa... atau\nbisa jadi efek samping dari obat yang kau minum.";
-        dialogues[2][3] = "Namun, aku tahu satu hal pasti, ini bukan gempa\nbiasa. Ada sesuatu yang lebih besar, lebih\nmengerikan di bawah sana... sesuatu yang tak\nbisa kita lihat dengan mata telanjang.";
-        dialogues[2][4] = "Terkadang yang terlihat di permukaan hanyalah\nawal dari bencana yang lebih besar.";
-        dialogues[2][5] = "Ah, aku pasti terdengar seperti orang tua yang\nkebanyakan nonton film horor.";
-        dialogues[2][6] = "Jangan khawatir. Selama kau masih bisa berdiri,\nitu tandanya kau masih kuat. Kau tidak akan\nmenjadi zombie! Mungkin...";
-        dialogues[2][7] = "Pergilah, Nak. Jalani perjalananmu dengan\nhati-hati... dan kalau bisa, jangan tersandung\ndi jalan, ya? Aku tidak punya cukup plester\nuntuk menambal luka di tubuhmu.";
+        dialogues[0][0] = "Hey, kau! Jangan mendekat terlalu dekat.";
+        dialogues[0][1] = "Kami sedang memeriksa gedung ini untuk\nmemastikan tidak ada yang terjebak di dalam.";
+        dialogues[1][0] = "Gempa ini cukup parah, beberapa bagian\ndari gedung bisa runtuh kapan saja.";
+        dialogues[1][1] = "Kami harus sangat berhati-hati, satu langkah\nsalah bisa berakibat fatal.";
+        dialogues[2][0] = "Kalau kau melihat ada tanda-tanda\nkehidupan di dalam reruntuhan, segera laporkan!";
+        dialogues[2][1] = "Setiap detik sangat berharga untuk menyelamatkan nyawa.";
+        dialogues[3][0] = "Kami dilatih untuk menghadapi situasi seperti ini,\ntapi tetap saja, melihat kehancuran ini\nselalu berat di hati.";
+        dialogues[4][0] = "Jangan khawatir, kami sudah terbiasa\nbekerja dalam kondisi berbahaya.";
+        dialogues[4][1] = "Tapi kau, lebih baik tetap di luar\narea berbahaya, biarkan kami yang menangani.";
+        dialogues[5][0] = "Periksa sekitar sini, kadang-kadang\nada orang yang mencoba mencari barang\nmereka di dalam gedung yang rusak.";
+        dialogues[5][1] = "Kami harus memastikan mereka tidak\nmemasuki area yang terlalu berbahaya.";
+        dialogues[6][0] = "Jika kau punya masker atau sarung tangan,\nbawa untuk kami. Debu dan puing di sini\nbisa sangat berbahaya.";
+        dialogues[7][0] = "Baiklah, kembali bekerja. Semoga kita\nbisa menemukan semua orang yang mungkin\nmasih terjebak.";
+        dialogues[7][1] = "Tetap waspada dan jangan abaikan\nkeselamatanmu sendiri!";
     }
+    
 
     public void setAction() {
 

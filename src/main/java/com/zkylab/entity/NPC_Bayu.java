@@ -52,17 +52,19 @@ public class NPC_Bayu extends Entity {
     }
 
     public void setDialogue() {
-        dialogues[0][0] = "!";
-        dialogues[1][0] = "Wah, akhirnya keluar juga!";
-        dialogues[2][0] = "Kupikir kau sudah berubah jadi tanaman pot\nkarena warna hijau itu.";
-        dialogues[2][1] = "Jangan sampai aku harus menyiram dan merawatmu\nseperti pohon di kebun belakang!";
-        dialogues[2][2] = "Tapi lihatlah, Nak. Seluruh kota berantakan,\nsementara rumahmu cuma bergoyang sedikit.\nMungkin rumahmu punya jimat anti-gempa... atau\nbisa jadi efek samping dari obat yang kau minum.";
-        dialogues[2][3] = "Namun, aku tahu satu hal pasti, ini bukan gempa\nbiasa. Ada sesuatu yang lebih besar, lebih\nmengerikan di bawah sana... sesuatu yang tak\nbisa kita lihat dengan mata telanjang.";
-        dialogues[2][4] = "Terkadang yang terlihat di permukaan hanyalah\nawal dari bencana yang lebih besar.";
-        dialogues[2][5] = "Ah, aku pasti terdengar seperti orang tua yang\nkebanyakan nonton film horor.";
-        dialogues[2][6] = "Jangan khawatir. Selama kau masih bisa berdiri,\nitu tandanya kau masih kuat. Kau tidak akan\nmenjadi zombie! Mungkin...";
-        dialogues[2][7] = "Pergilah, Nak. Jalani perjalananmu dengan\nhati-hati... dan kalau bisa, jangan tersandung\ndi jalan, ya? Aku tidak punya cukup plester\nuntuk menambal luka di tubuhmu.";
+        dialogues[0][0] = "Oh, kau datang untuk memeriksa keadaanku?";
+        dialogues[0][1] = "Jangan khawatir, aku sudah terbiasa\nhidup di gunung berapi ini.";
+        dialogues[1][0] = "Lucu, ya? Gempa kali ini bukan dari\nsi gunung tua ini, tapi dari tempat lain.";
+        dialogues[1][1] = "Biasanya, aku mengaitkan getaran tanah\ndengan letusan, tapi kali ini berbeda.";
+        dialogues[2][0] = "Banyak orang takut tinggal di dekat gunung berapi,\ntapi tanah di sini sangat subur, sempurna\nuntuk bertani.";
+        dialogues[3][0] = "Gempa ini membuat beberapa jalur air\ntergeser. Aku harus mencari sumber air baru\nuntuk mengairi sawahku.";
+        dialogues[4][0] = "Tapi, tahu tidak? Gempa ini mengingatkan kita\nbahwa bukan hanya gunung yang bisa\nmenyebabkan masalah. Alam punya banyak\ncara untuk menguji kita.";
+        dialogues[5][0] = "Sejauh ini, ladangku baik-baik saja,\ntapi aku harus terus mengawasi,\nsiapa tahu ada tanah longsor kecil setelah ini.";
+        dialogues[6][0] = "Jika kau membutuhkan hasil bumi,\naku punya beberapa hasil panen yang siap\ndiambil. Tidak peduli seberapa besar\ngempanya, hidup harus terus berjalan!";
+        dialogues[7][0] = "Jangan ragu untuk datang kembali kalau\nbutuh bantuan atau hanya ingin berbicara.";
+        dialogues[7][1] = "Dan ingat, gunung ini mungkin terlihat tenang,\ntapi dia selalu mengawasi!";
     }
+    
 
     public void setAction() {
 

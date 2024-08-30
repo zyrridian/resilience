@@ -36,7 +36,6 @@ public class NPC_Sari extends Entity {
         setDialogue();
 
     }
-    
 
     public void getImage() {
         avatar = setup("/npc/sari_base_avatar", gamePanel.tileSize, gamePanel.tileSize);
@@ -51,16 +50,18 @@ public class NPC_Sari extends Entity {
     }
 
     public void setDialogue() {
-        dialogues[0][0] = "!";
-        dialogues[1][0] = "Wah, akhirnya keluar juga!";
-        dialogues[2][0] = "Kupikir kau sudah berubah jadi tanaman pot\nkarena warna hijau itu.";
-        dialogues[2][1] = "Jangan sampai aku harus menyiram dan merawatmu\nseperti pohon di kebun belakang!";
-        dialogues[2][2] = "Tapi lihatlah, Nak. Seluruh kota berantakan,\nsementara rumahmu cuma bergoyang sedikit.\nMungkin rumahmu punya jimat anti-gempa... atau\nbisa jadi efek samping dari obat yang kau minum.";
-        dialogues[2][3] = "Namun, aku tahu satu hal pasti, ini bukan gempa\nbiasa. Ada sesuatu yang lebih besar, lebih\nmengerikan di bawah sana... sesuatu yang tak\nbisa kita lihat dengan mata telanjang.";
-        dialogues[2][4] = "Terkadang yang terlihat di permukaan hanyalah\nawal dari bencana yang lebih besar.";
-        dialogues[2][5] = "Ah, aku pasti terdengar seperti orang tua yang\nkebanyakan nonton film horor.";
-        dialogues[2][6] = "Jangan khawatir. Selama kau masih bisa berdiri,\nitu tandanya kau masih kuat. Kau tidak akan\nmenjadi zombie! Mungkin...";
-        dialogues[2][7] = "Pergilah, Nak. Jalani perjalananmu dengan\nhati-hati... dan kalau bisa, jangan tersandung\ndi jalan, ya? Aku tidak punya cukup plester\nuntuk menambal luka di tubuhmu.";
+        dialogues[0][0] = "Oh, kau di sini akhirnya.";
+        dialogues[0][1] = "Lihatlah, barangku jatuh ke dalam patahan jalan itu.";
+        dialogues[1][0] = "Aku tahu ini berbahaya, tapi barang itu\nterlalu berharga untuk ditinggalkan begitu saja.";
+        dialogues[1][1] = "Dan aku tidak akan membiarkannya hilang\nbegitu saja, meskipun harus mengambil risiko.";
+        dialogues[2][0] = "Namun, aku bukan orang bodoh yang\nmelompat ke dalam tanpa pikir panjang.";
+        dialogues[2][1] = "Kau, bantu aku mengambilnya. Aku akan\nmemberimu sesuatu yang setimpal.";
+        dialogues[3][0] = "Dan tolong, lakukan ini dengan hati-hati.\nAku tidak punya waktu untuk berurusan dengan\nlebih banyak masalah.";
+        dialogues[4][0] = "Aku menghargai keberanianmu, tapi ingat,\nsatu langkah salah dan kau akan terjebak di sana.";
+        dialogues[5][0] = "Baiklah, cepat selesaikan tugas ini, dan\nkita bisa kembali ke urusan masing-masing.";
+        dialogues[6][0] = "Oh, jangan kira aku tidak tahu betapa\nberbahayanya ini. Tapi ada hal-hal yang\ntidak bisa dikorbankan, bahkan dalam situasi seperti ini.";
+        dialogues[7][0] = "Terima kasih, kau benar-benar bisa diandalkan.\nMungkin aku akan mempertimbangkan untuk\nmempercayakan tugas penting lain padamu.";
+        dialogues[8][0] = "Sekarang, pergilah. Aku punya hal lain yang\nharus dilakukan, dan waktu adalah uang, kau tahu.";
     }
 
     public void setAction() {

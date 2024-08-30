@@ -36,7 +36,6 @@ public class NPC_Surya extends Entity {
         setDialogue();
 
     }
-    
 
     public void getImage() {
         avatar = setup("/npc/surya_base_avatar", gamePanel.tileSize, gamePanel.tileSize);
@@ -51,16 +50,18 @@ public class NPC_Surya extends Entity {
     }
 
     public void setDialogue() {
-        dialogues[0][0] = "!";
-        dialogues[1][0] = "Wah, akhirnya keluar juga!";
-        dialogues[2][0] = "Kupikir kau sudah berubah jadi tanaman pot\nkarena warna hijau itu.";
-        dialogues[2][1] = "Jangan sampai aku harus menyiram dan merawatmu\nseperti pohon di kebun belakang!";
-        dialogues[2][2] = "Tapi lihatlah, Nak. Seluruh kota berantakan,\nsementara rumahmu cuma bergoyang sedikit.\nMungkin rumahmu punya jimat anti-gempa... atau\nbisa jadi efek samping dari obat yang kau minum.";
-        dialogues[2][3] = "Namun, aku tahu satu hal pasti, ini bukan gempa\nbiasa. Ada sesuatu yang lebih besar, lebih\nmengerikan di bawah sana... sesuatu yang tak\nbisa kita lihat dengan mata telanjang.";
-        dialogues[2][4] = "Terkadang yang terlihat di permukaan hanyalah\nawal dari bencana yang lebih besar.";
-        dialogues[2][5] = "Ah, aku pasti terdengar seperti orang tua yang\nkebanyakan nonton film horor.";
-        dialogues[2][6] = "Jangan khawatir. Selama kau masih bisa berdiri,\nitu tandanya kau masih kuat. Kau tidak akan\nmenjadi zombie! Mungkin...";
-        dialogues[2][7] = "Pergilah, Nak. Jalani perjalananmu dengan\nhati-hati... dan kalau bisa, jangan tersandung\ndi jalan, ya? Aku tidak punya cukup plester\nuntuk menambal luka di tubuhmu.";
+        dialogues[0][0] = "Wah, kau harus melihat ini!";
+        dialogues[0][1] = "Mobilku! Ini benar-benar hancur berantakan.";
+        dialogues[1][0] = "Aku tahu gempa ini kuat, tapi siapa sangka\nmobilku bisa jadi korban begini.";
+        dialogues[1][1] = "Hei, setidaknya ini jadi cerita yang menarik\nuntuk dibagikan nanti, kan?";
+        dialogues[2][0] = "Aku selalu bilang, 'hidup penuh kejutan',\ntapi ini benar-benar di luar dugaanku.";
+        dialogues[2][1] = "Kau tahu, aku sebenarnya cukup terikat\ndengan mobil ini. Tapi ya, apa boleh buat.";
+        dialogues[3][0] = "Sekarang aku harus cari cara untuk\nkeluar dari sini tanpa mobil. Mungkin kau\npunya ide?";
+        dialogues[4][0] = "Oh, hampir lupa! Jika kau butuh tumpangan,\nsepertinya kita sama-sama harus mencari alternatif\nkarena... yah, lihatlah keadaan ini.";
+        dialogues[5][0] = "Sial, aku baru saja mengganti bannya\ntiga hari yang lalu. Benar-benar waktu yang\ntidak tepat.";
+        dialogues[6][0] = "Tapi, hei, aku tidak akan biarkan ini\nmerusak semangatku! Kita masih bisa\nbersenang-senang, kan?";
+        dialogues[7][0] = "Jika kau butuh bantuan, aku siap\ndengan tangan terbuka. Kita harus tetap\nbersama dalam situasi seperti ini!";
+        dialogues[8][0] = "Baiklah, ayo kita cari cara untuk\nmenyelesaikan masalah ini. Mobil bisa diganti,\ntapi persahabatan? Itu yang terpenting.";
     }
 
     public void setAction() {
