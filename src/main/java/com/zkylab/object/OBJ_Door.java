@@ -28,7 +28,8 @@ public class OBJ_Door extends Entity {
     }
 
     public void setDialogue() {
-        dialogues[0][0] = "Butuh kunci untuk membukanya";
+        dialogues[0][0] = "Kamu butuh kunci untuk membuka pintu ini.";
+        dialogues[0][1] = "Bantulah penduduk di kota untuk mendapatkannya.";
     }
 
     public void interact() {

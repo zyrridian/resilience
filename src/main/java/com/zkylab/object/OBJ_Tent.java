@@ -22,7 +22,7 @@ public class OBJ_Tent extends Entity {
 
     public boolean use(Entity entity) {
         gamePanel.gameState = GamePanel.SLEEP_STATE;
-        gamePanel.playSoundEffect(15);
+        gamePanel.playSoundEffect(GamePanel.SFX_SLEEP);
         gamePanel.player.life = gamePanel.player.maxLife;
         gamePanel.player.mana = gamePanel.player.maxMana;
         gamePanel.player.getSleepingImage(down1);
