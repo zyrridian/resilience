@@ -8,6 +8,7 @@ import com.zkylab.data.Progress;
 import com.zkylab.entity.Entity;
 import com.zkylab.entity.NPC_Sastro;
 import com.zkylab.entity.PlayerDummy;
+import com.zkylab.object.OBJ_BlueHeart;
 import com.zkylab.object.OBJ_Cloud_Concern;
 
 public class CutsceneManager {
@@ -35,11 +36,11 @@ public class CutsceneManager {
         this.gamePanel = gamePanel;
         cutsceneMaster = new Entity(gamePanel);
         endCredit = "Program/Desain/Music/Skenario"
-                + "Iqbal D.\n"
-                + "Renaldy L.\n"
-                + "Rezky A.\n"
+                + "Arye Burhanudin\n"
+                + "Rafi Ramdhani\n"
+                + "Rezky Aditia Fauzan\n"
                 + "\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                + "Thank you for playing!";
+                + "Terimakasih telah bermain!";
         setDialogue();
     }
 
@@ -61,6 +62,9 @@ public class CutsceneManager {
                 break;
             case water:
                 scene_water();
+                break;
+            case ending:
+                scene_ending();
                 break;
         }
     }
@@ -367,93 +371,97 @@ public class CutsceneManager {
     // }
     // }
 
-    // public void scene_ending() {
+    public void scene_ending() {
 
-    // // Stop music
-    // if (scenePhase == 0) {
-    // gamePanel.stopMusic();
-    // gamePanel.ui.npc = new OBJ_BlueHeart(gamePanel);
-    // scenePhase++;
-    // }
+        // Stop music
+        if (scenePhase == 0) {
+            gamePanel.stopMusic(GamePanel.DUNGEON_AREA);
+            gamePanel.ui.npc = new OBJ_BlueHeart(gamePanel);
+            scenePhase++;
+        }
 
-    // // Display dialogues
-    // if (scenePhase == 1) {
-    // gamePanel.ui.drawDialogueScreen();
-    // }
+        // Display dialogues
+        if (scenePhase == 1) {
+            gamePanel.ui.drawDialogueScreen();
+        }
 
-    // // Play the fanfare
-    // if (scenePhase == 2) {
-    // gamePanel.playSoundEffect(4);
-    // scenePhase++;
-    // }
+        // Play the fanfare
+        if (scenePhase == 2) {
+            gamePanel.playSoundEffect(GamePanel.SFX_FANFARE);
+            scenePhase++;
+        }
 
-    // // Wait until the sound effect ends
-    // if (scenePhase == 3) {
-    // if (counterReached(300)) {
-    // scenePhase++;
-    // }
-    // }
+        // Wait until the sound effect ends
+        if (scenePhase == 3) {
+            if (counterReached(120)) {
+                scenePhase++;
+            }
+        }
 
-    // // Scene gradually darker
-    // if (scenePhase == 4) {
-    // alpha += 0.005F;
-    // if (alpha > 1F) {
-    // alpha = 1F;
-    // }
-    // drawBlackBackground(alpha);
-    // if (alpha == 1F) {
-    // alpha = 0;
-    // scenePhase++;
-    // }
-    // }
+        // Scene gradually darker
+        if (scenePhase == 4) {
+            alpha += 0.005F;
+            if (alpha > 1F) {
+                alpha = 1F;
+            }
+            drawBlackBackground(alpha);
+            if (alpha == 1F) {
+                alpha = 0;
+                scenePhase++;
+            }
+        }
 
-    // if (scenePhase == 5) {
-    // drawBlackBackground(1F);
-    // alpha += 0.005F;
-    // if (alpha > 1F) {
-    // alpha = 1F;
-    // }
-    // String text = "Setelah perjuangan berat melawan monster penunggu gua,\n"
-    // + "akhirnya petualang berhasil menyelamatkan pulau ini.\n"
-    // + "Tapi ini bukan akhir dari segalanya, karena monster\n"
-    // + "di pulau ini masih terus bermunculan tanpa henti.\n"
-    // + "Keberadaan penduduk pulau lainnya masih belum diketahui."
-    // + "Petualangan Echoes of Ethernity baru saja dimulai.";
-    // drawString(alpha, 30F, 200, text, 70);
-    // gamePanel.playMusic(23);
+        if (scenePhase == 5) {
+            drawBlackBackground(1F);
+            alpha += 0.005F;
+            if (alpha > 1F) {
+                alpha = 1F;
+            }
 
-    // if (counterReached(600)) {
-    // scenePhase++;
-    // }
-    // }
+            String text = "Setelah perjuangan berat melawan monster,\n"
+            + "akhirnya petualang berhasil menyelamatkan pulau ini.\n"
+            + "Tapi ini bukan akhir dari segalanya, karena monster\n"
+            + "di pulau ini masih terus bermunculan tanpa henti.\n"
+            + "Penyebab dari gempa ini masih belum diketahui."
+            + "Petualangan Resilience baru saja dimulai.";
+            drawString(alpha, 30F, 200, text, 70);
+            gamePanel.playMusic(GamePanel.MUSIC_INDOOR);
 
-    // if (scenePhase == 6) {
-    // drawBlackBackground(1F);
-    // drawString(1F, 100F, gamePanel.screenHeight / 2, "Echoes of Eternity", 40);
+            if (counterReached(600)) {
+                scenePhase++;
+            }
+        }
 
-    // if (counterReached(480)) {
-    // scenePhase++;
-    // }
-    // }
+        if (scenePhase == 6) {
+            drawBlackBackground(1F);
+            drawString(1F, 100F, gamePanel.screenHeight / 2, "Resilience", 40);
 
-    // if (scenePhase == 7) {
-    // drawBlackBackground(1F);
-    // y = gamePanel.screenHeight / 2;
-    // drawString(1F, 30F, y, endCredit, 40);
+            if (counterReached(480)) {
+                scenePhase++;
+            }
+        }
 
-    // if (counterReached(120)) {
-    // scenePhase++;
-    // }
-    // }
+        if (scenePhase == 7) {
+            drawBlackBackground(1F);
+            y = gamePanel.screenHeight / 2;
+            drawString(1F, 30F, y, endCredit, 40);
 
-    // // Scroll credits
-    // if (scenePhase == 8) {
-    // drawBlackBackground(1F);
-    // y--;
-    // drawString(1F, 30F, y, endCredit, 40);
-    // }
+            if (counterReached(120)) {
+                scenePhase++;
+            }
+        }
 
-    // }
+        // Scroll credits
+        if (scenePhase == 8) {
+            drawBlackBackground(1F);
+            y--;
+            drawString(1F, 30F, y, endCredit, 40);
+            if (counterReached(300)) {
+                scenePhase++;
+            }
+        }
+
+    }
 
     public boolean counterReached(int target) {
         boolean counterReached = false;

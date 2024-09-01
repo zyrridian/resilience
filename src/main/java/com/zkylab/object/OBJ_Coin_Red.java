@@ -21,6 +21,8 @@ public class OBJ_Coin_Red extends Entity {
         gamePanel.playSoundEffect(GamePanel.SFX_COIN);
         gamePanel.ui.addMessage("Koin +" + value);
         gamePanel.player.coin += value;
+        gamePanel.gameState = GamePanel.CUTSCENE_STATE;
+        gamePanel.cManager.sceneNumber = gamePanel.cManager.ending;
         return true;
     }
     
