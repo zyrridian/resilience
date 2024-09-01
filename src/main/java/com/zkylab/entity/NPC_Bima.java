@@ -22,7 +22,7 @@ public class NPC_Bima extends Entity {
         solidAreaDefaultX = solidArea.x;
         solidAreaDefaultY = solidArea.y;
 
-        dialogueSet = 0;
+        dialogueSet = -1;
 
         // if (Progress.cutsceneWarningFinished) {
             sleep = false;
@@ -56,8 +56,8 @@ public class NPC_Bima extends Entity {
         dialogues[1][0] = "Gempa ini cukup parah, beberapa bagian\ndari gedung bisa runtuh kapan saja.";
         dialogues[1][1] = "Kami harus sangat berhati-hati, satu langkah\nsalah bisa berakibat fatal.";
         dialogues[2][0] = "Kalau kau melihat ada tanda-tanda\nkehidupan di dalam reruntuhan, segera laporkan!";
-        dialogues[2][1] = "Setiap detik sangat berharga untuk menyelamatkan nyawa.";
-        dialogues[3][0] = "Kami dilatih untuk menghadapi situasi seperti ini,\ntapi tetap saja, melihat kehancuran ini\nselalu berat di hati.";
+        dialogues[2][1] = "Setiap detik sangat berharga untuk\nmenyelamatkan nyawa.";
+        dialogues[3][0] = "Kami dilatih untuk menghadapi situasi seperti\nini, tapi tetap saja, melihat kehancuran ini\nselalu berat di hati.";
         dialogues[4][0] = "Jangan khawatir, kami sudah terbiasa\nbekerja dalam kondisi berbahaya.";
         dialogues[4][1] = "Tapi kau, lebih baik tetap di luar\narea berbahaya, biarkan kami yang menangani.";
         dialogues[5][0] = "Periksa sekitar sini, kadang-kadang\nada orang yang mencoba mencari barang\nmereka di dalam gedung yang rusak.";

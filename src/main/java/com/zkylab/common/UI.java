@@ -352,15 +352,15 @@ public class UI {
 
             // Character Image
             x = gamePanel.screenWidth / 2 - (gamePanel.tileSize * 2) / 2;
-            g2.drawImage(gamePanel.player.down1, x, y, gamePanel.tileSize * 2, gamePanel.tileSize * 2, null);
             y += gamePanel.tileSize * 1;
+            g2.drawImage(gamePanel.player.down1, x, y, gamePanel.tileSize * 2, gamePanel.tileSize * 2, null);
 
             // Menu
             g2.setFont(g2.getFont().deriveFont(Font.PLAIN, 28F));
 
             text = "NEW GAME";
             x = getXforCenteredText(text);
-            y += gamePanel.tileSize * 2.5;
+            y += gamePanel.tileSize * 3.5;
             g2.drawString(text, x, y);
             if (commandNumber == 0) {
                 g2.drawString(">", x - gamePanel.tileSize, y);
@@ -374,7 +374,15 @@ public class UI {
                 g2.drawString(">", x - gamePanel.tileSize, y);
             }
 
-            text = "CHALLENGE MODE";
+            // text = "CHALLENGE MODE";
+            // x = getXforCenteredText(text);
+            // y += gamePanel.tileSize;
+            // g2.drawString(text, x, y);
+            // if (commandNumber == 2) {
+            //     g2.drawString(">", x - gamePanel.tileSize, y);
+            // }
+
+            text = "CREDITS";
             x = getXforCenteredText(text);
             y += gamePanel.tileSize;
             g2.drawString(text, x, y);
@@ -382,19 +390,11 @@ public class UI {
                 g2.drawString(">", x - gamePanel.tileSize, y);
             }
 
-            text = "CREDITS";
-            x = getXforCenteredText(text);
-            y += gamePanel.tileSize;
-            g2.drawString(text, x, y);
-            if (commandNumber == 3) {
-                g2.drawString(">", x - gamePanel.tileSize, y);
-            }
-
             text = "EXIT";
             x = getXforCenteredText(text);
             y += gamePanel.tileSize;
             g2.drawString(text, x, y);
-            if (commandNumber == 4) {
+            if (commandNumber == 3) {
                 g2.drawString(">", x - gamePanel.tileSize, y);
             }
 

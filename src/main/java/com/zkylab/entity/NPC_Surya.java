@@ -22,7 +22,7 @@ public class NPC_Surya extends Entity {
         solidAreaDefaultX = solidArea.x;
         solidAreaDefaultY = solidArea.y;
 
-        dialogueSet = 0;
+        dialogueSet = -1;
 
         // if (Progress.cutsceneWarningFinished) {
         //     sleep = false;
@@ -57,7 +57,7 @@ public class NPC_Surya extends Entity {
         dialogues[2][0] = "Aku selalu bilang, 'hidup penuh kejutan',\ntapi ini benar-benar di luar dugaanku.";
         dialogues[2][1] = "Kau tahu, aku sebenarnya cukup terikat\ndengan mobil ini. Tapi ya, apa boleh buat.";
         dialogues[3][0] = "Sekarang aku harus cari cara untuk\nkeluar dari sini tanpa mobil. Mungkin kau\npunya ide?";
-        dialogues[4][0] = "Oh, hampir lupa! Jika kau butuh tumpangan,\nsepertinya kita sama-sama harus mencari alternatif\nkarena... yah, lihatlah keadaan ini.";
+        dialogues[4][0] = "Oh, hampir lupa! Jika kau butuh tumpangan,\nsepertinya kita sama-sama harus mencari\nalternatif karena... yah, lihatlah keadaan ini.";
         dialogues[5][0] = "Sial, aku baru saja mengganti bannya\ntiga hari yang lalu. Benar-benar waktu yang\ntidak tepat.";
         dialogues[6][0] = "Tapi, hei, aku tidak akan biarkan ini\nmerusak semangatku! Kita masih bisa\nbersenang-senang, kan?";
         dialogues[7][0] = "Jika kau butuh bantuan, aku siap\ndengan tangan terbuka. Kita harus tetap\nbersama dalam situasi seperti ini!";

@@ -22,7 +22,7 @@ public class NPC_Tirta extends Entity {
         solidAreaDefaultX = solidArea.x;
         solidAreaDefaultY = solidArea.y;
 
-        dialogueSet = 0;
+        dialogueSet = -1;
 
         // if (Progress.cutsceneWarningFinished) {
         //     sleep = false;
@@ -61,9 +61,10 @@ public class NPC_Tirta extends Entity {
         dialogues[2][1] = "Kau tahu, air bisa menjadi sahabat atau musuh\ndalam situasi seperti ini.";
         dialogues[3][0] = "Sekarang, tugasmu adalah memastikan\norang-orang tidak mengambil air dari sumber\nyang terkontaminasi.";
         dialogues[3][1] = "Dan ingat, jangan berenang di genangan air\npasca gempa, kau tidak akan tahu apa yang\nbersembunyi di bawahnya!";
-        dialogues[4][0] = "Baiklah, aku harus kembali bekerja. Sampai jumpa!";
+        dialogues[4][0] = "Baiklah, aku harus kembali bekerja. Sampai\njumpa!";
         dialogues[5][0] = "Ingat, jika kau melihat sesuatu yang aneh\ndengan air, laporkan padaku segera.";
-        dialogues[6][0] = "Kau kekurangan peralatan? Mungkin\nkau bisa menemukannya di toko di seberang jalan.";
+        dialogues[6][0] = "Kau kekurangan peralatan? Mungkin kau bisa\nmenemukannya di truk milik pria di kota.";
+        dialogues[6][1] = "Kudengar dia sedang membagikan makanan dan\nminuman gratis.";
         dialogues[7][0] = "Sampai nanti, tetaplah berhati-hati!";
     }
 

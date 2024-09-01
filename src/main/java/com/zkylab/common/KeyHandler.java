@@ -110,16 +110,16 @@ public class KeyHandler implements KeyListener {
                     gamePanel.gameState = GamePanel.PLAY_STATE;
                     gamePanel.playMusic(GamePanel.MUSIC_INDOOR);
                 }
-                // challenge mode
-                if (gamePanel.ui.commandNumber == 2) {
-                    gamePanel.ui.titleScreenState = 99;
-                }
+                // // challenge mode
+                // if (gamePanel.ui.commandNumber == 2) {
+                //     gamePanel.ui.titleScreenState = 99;
+                // }
                 // credits
-                if (gamePanel.ui.commandNumber == 3) {
+                if (gamePanel.ui.commandNumber == 2) {
                     gamePanel.ui.titleScreenState = 3;
                 }
                 // exit
-                if (gamePanel.ui.commandNumber == 4)
+                if (gamePanel.ui.commandNumber == 3)
                     System.exit(code);
             }
         }
@@ -323,7 +323,8 @@ public class KeyHandler implements KeyListener {
         if (code == KeyEvent.VK_ENTER) {
             if (gamePanel.ui.commandNumber == 0) {
                 gamePanel.currentMusicIndex = 0;
-                gamePanel.eventHandler.teleport(0, 11, 20, GamePanel.OUTSIDE_AREA);
+                gamePanel.currentMap = GamePanel.MAP_LIVING_ROOM;
+                gamePanel.eventHandler.teleport(GamePanel.MAP_LIVING_ROOM, 28, 23, GamePanel.INDOOR_AREA);
                 // gamePanel.saveLoad.load();
                 // gamePanel.gameState = GamePanel.PLAY_STATE;
                 gamePanel.resetGame(false);

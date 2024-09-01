@@ -22,7 +22,7 @@ public class OBJ_Mana_Crystal extends Entity{
     }
 
     public boolean use(Entity entity) {
-        gamePanel.playSoundEffect(2);
+        gamePanel.playSoundEffect(GamePanel.SFX_POWER_UP);
         gamePanel.ui.addMessage("Mana +" + value);
         entity.mana += value;
         return true;

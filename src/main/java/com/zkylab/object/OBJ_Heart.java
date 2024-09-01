@@ -23,7 +23,7 @@ public class OBJ_Heart extends Entity {
     }
 
     public boolean use(Entity entity) {
-        gamePanel.playSoundEffect(2);
+        gamePanel.playSoundEffect(GamePanel.SFX_POWER_UP);
         gamePanel.ui.addMessage("Nyawa +" + value);
         entity.life += value;
         return true;

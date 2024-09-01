@@ -15,7 +15,7 @@ public class OBJ_Key extends Entity {
         name = objName;
         down1 = setup("/objects/key", gamePanel.tileSize, gamePanel.tileSize);
         description = "[" + name + "]\nUntuk pintu.";
-        price = 100;
+        price = 0;
         stackable = true;
         setDialogue();
     }
@@ -29,7 +29,7 @@ public class OBJ_Key extends Entity {
         int objIndex = getDetected(entity, gamePanel.obj, "Pintu");
         if (objIndex != 999) { // use the key
             startDialogue(this, 0);
-            gamePanel.playSoundEffect(3);
+            gamePanel.playSoundEffect(GamePanel.SFX_UNLOCK);
             gamePanel.obj[gamePanel.currentMap][objIndex] = null;
             return true;
         } else {

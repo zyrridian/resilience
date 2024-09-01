@@ -46,12 +46,12 @@ public class GamePanel extends JPanel implements Runnable {
     public final static int MAP_HOUSE = 0;
     public final static int MAP_LIVING_ROOM = 1;
     public final static int MAP_TOWN = 2;
-    // public final static int MAP_CHALLENGE = 3;
     public final static int MAP_ROAD = 3;
     public final static int MAP_TOWER_1 = 4;
     public final static int MAP_TOWER_2 = 5;
     public final static int MAP_TOWER_3 = 6;
     public final static int MAP_RIVER = 7;
+    public final static int MAP_CHALLENGE = 8;
     public int maxWorldCol;
     public int maxWorldRow;
 
@@ -138,6 +138,8 @@ public class GamePanel extends JPanel implements Runnable {
     public final static int SFX_GAME_OVER = 65;
     public final static int SFX_STAIRS = 66;
     public final static int SFX_SLEEP = 67;
+    public final static int SFX_DOOR_OPEN = 68;
+
 
 
     // Others

@@ -157,7 +157,7 @@ public class MON_SkeletonLord extends Entity {
         // Remove the iron doors
         for (int i = 0; i < gamePanel.obj[1].length; i++) {
             if (gamePanel.obj[gamePanel.currentMap][i] != null && gamePanel.obj[gamePanel.currentMap][i].name.equals(OBJ_DoorIron.objName)) {
-                gamePanel.playSoundEffect(20);
+                gamePanel.playSoundEffect(GamePanel.SFX_DOOR_OPEN);
                 gamePanel.obj[gamePanel.currentMap][i] = null;
             }
         }

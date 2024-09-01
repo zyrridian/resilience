@@ -22,7 +22,7 @@ public class NPC_Bumi extends Entity {
         solidAreaDefaultX = solidArea.x;
         solidAreaDefaultY = solidArea.y;
 
-        dialogueSet = 0;
+        dialogueSet = -1;
 
         // if (Progress.cutsceneWarningFinished) {
         //     sleep = false;
@@ -64,7 +64,7 @@ public class NPC_Bumi extends Entity {
         dialogues[5][0] = "Jika kau tertarik, aku bisa mengajarkanmu\nsedikit tentang bagaimana membaca batuan.";
         dialogues[5][1] = "Ini bukan hanya ilmu, tapi juga seni\nmembaca alam.";
         dialogues[6][0] = "Baiklah, aku harus kembali bekerja.\nIngat, setiap batu punya cerita yang harus\ndipahami!";
-        dialogues[6][1] = "Sampai jumpa, dan tetap berhati-hati di luar sana!";
+        dialogues[6][1] = "Sampai jumpa, dan tetap berhati-hati di luar\nsana!";
     }
     
 

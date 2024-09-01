@@ -16,7 +16,7 @@ public class OBJ_Sword_God extends Entity {
         attackArea.width = 36;
         attackArea.height = 36;
         description = "[" + name + "]\nMenyerang dengan cepat.";
-        price = 1000;
+        price = 0;
         knockBackPower = 0;
         motion1_duration = 5;
         motion2_duration = 6;

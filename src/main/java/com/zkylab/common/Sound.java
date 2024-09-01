@@ -40,7 +40,7 @@ public class Sound {
         soundURL[GamePanel.SFX_PARRY] = getClass().getResource("/sounds/parry.wav");
         soundURL[GamePanel.SFX_SPEAK] = getClass().getResource("/sounds/speak.wav");
         soundURL[19] = getClass().getResource("/sounds/chipwall.wav");
-        soundURL[20] = getClass().getResource("/sounds/dooropen.wav");
+        soundURL[GamePanel.SFX_DOOR_OPEN] = getClass().getResource("/sounds/dooropen.wav");
         // soundURL[21] = getClass().getResource("/sounds/BossBattle.wav");
         soundURL[GamePanel.MUSIC_OUTDOOR] = getClass().getResource("/sounds/MainTheme.wav");
         soundURL[GamePanel.MUSIC_INDOOR] = getClass().getResource("/sounds/MainThemeGood.wav");

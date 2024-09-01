@@ -91,7 +91,27 @@ public class EventHandler {
         eventMaster.dialogues[12][0] = "Sofa ini terlihat lebih nyaman dari kasurmu.";
         eventMaster.dialogues[13][0] = "Kipas ini tak lagi berfungsi.";
         eventMaster.dialogues[13][1] = "Debunya pun mulai menumpuk.";
-
+        eventMaster.dialogues[14][0] = "Hey! Ini bukan rumahmu!";
+        eventMaster.dialogues[14][1] = "Kau pikir bisa masuk begitu saja?";
+        eventMaster.dialogues[15][0] = "Lemari ini tampak rapuh, hampir roboh.";
+        eventMaster.dialogues[15][1] = "Di dalamnya ada tumpukan catatan lama...";
+        eventMaster.dialogues[15][2] = "Catatan-catatan ini penuh dengan informasi tentang gempa\nbumi.";
+        eventMaster.dialogues[15][3] = "\"Pastikan benda berat selalu diamankan,\" tertulis pada\nsalah satu catatan.";
+        eventMaster.dialogues[15][4] = "Seseorang benar-benar berusaha untuk mengingatkan kita akan\nbahaya.";
+        eventMaster.dialogues[16][0] = "Lemari tua ini penuh dengan kertas yang berserakan.";
+        eventMaster.dialogues[16][1] = "Di antara kertas-kertas itu, ada catatan tentang jenis-jenis\ngempa.";
+        eventMaster.dialogues[16][2] = "\"Gempa tektonik terjadi akibat pergerakan lempeng,\" tertulis\ndi salah satu catatan.";
+        eventMaster.dialogues[16][3] = "\"Gempa vulkanik, di sisi lain, disebabkan oleh aktivitas\ngunung berapi.\"";
+        eventMaster.dialogues[16][4] = "Sepertinya penulis catatan ini sangat memahami apa yang\nterjadi...";
+        eventMaster.dialogues[17][0] = "Sebaiknya kamu tidak mengekplorasi gedung berbahaya ini.";
+        eventMaster.dialogues[18][0] = "Layar televisi ini sudah rusak.";
+        eventMaster.dialogues[18][1] = "Namun spare-part nya masih bagus.";
+        eventMaster.dialogues[19][0] = "Mobil ini terlihat parah, penyok di sana-sini.";
+        eventMaster.dialogues[19][1] = "Mesin mungkin tidak bisa dinyalakan lagi...";
+        eventMaster.dialogues[19][2] = "Tapi siapa tahu, dengan sedikit usaha, mungkin masih bisa diperbaiki.";
+        eventMaster.dialogues[20][0] = "Sebuah batu besar jatuh dari reruntuhan gedung.";
+        eventMaster.dialogues[20][1] = "Berat dan kokoh, tampaknya mustahil untuk dipindahkan sendirian.";
+        eventMaster.dialogues[20][2] = "Lebih baik mencari jalan lain, daripada mencoba menggesernya.";
     }
 
     /**
@@ -163,6 +183,10 @@ public class EventHandler {
             openTheDoor(GamePanel.MAP_TOWER_3, 28, 43, GamePanel.DUNGEON_AREA);
         else if (hit(GamePanel.MAP_TOWER_3, 28, 43, "down"))
             teleport(GamePanel.MAP_TOWN, 24, 29, GamePanel.OUTSIDE_AREA);
+
+        // road to challenge
+        else if (hit(GamePanel.MAP_ROAD, 26, 34, "down"))
+            teleport(GamePanel.MAP_CHALLENGE, 30, 17, GamePanel.DUNGEON_AREA);
 
         // ========== INTERACT OBJECT ========= //
 
@@ -237,6 +261,40 @@ public class EventHandler {
                 || hit(GamePanel.MAP_LIVING_ROOM, 28, 25, "left") || hit(GamePanel.MAP_LIVING_ROOM, 28, 26, "left"))
             interactObject(13);
 
+        // pintu tetangga
+        else if (hit(GamePanel.MAP_RIVER, 23, 26, "up"))
+            interactObject(14);
+
+        // lemari tower 1
+        else if (hit(GamePanel.MAP_TOWER_1, 18, 22, "up") || hit(GamePanel.MAP_TOWER_1, 19, 22, "up") || hit(GamePanel.MAP_TOWER_1, 20, 22, "up"))
+            interactObject(15);
+
+        // lemari tower 1
+        else if (hit(GamePanel.MAP_TOWER_1, 18, 28, "up") || hit(GamePanel.MAP_TOWER_1, 19, 28, "up") || hit(GamePanel.MAP_TOWER_1, 30, 25, "up") || hit(GamePanel.MAP_TOWER_1, 31, 25, "up"))
+            interactObject(16);
+
+        // pintu tower 2
+        else if (hit(GamePanel.MAP_TOWER_1, 22, 21, "up") || hit(GamePanel.MAP_TOWER_1, 23, 21, "up") || hit(GamePanel.MAP_TOWER_1, 28, 21, "up") || hit(GamePanel.MAP_TOWER_1, 29, 21, "up"))
+            interactObject(17);
+
+        // pintu tower 4
+        else if (hit(GamePanel.MAP_TOWN, 37, 29, "up"))
+            interactObject(9);
+        
+        // tv tower 3
+        else if (hit(GamePanel.MAP_TOWER_3, 24, 25, "up") || hit(GamePanel.MAP_TOWER_3, 36, 25, "up"))
+            interactObject(18);
+        
+        // mobil rusak town
+        else if (hit(GamePanel.MAP_TOWN, 17, 19, "right") || hit(GamePanel.MAP_TOWN, 17, 20, "right") || hit(GamePanel.MAP_TOWN, 18, 18, "down") || hit(GamePanel.MAP_TOWN, 19, 18, "down") || hit(GamePanel.MAP_TOWN, 21, 19, "left") || hit(GamePanel.MAP_TOWN, 21, 20, "left") ||
+                hit(GamePanel.MAP_TOWN, 33, 31, "right") || hit(GamePanel.MAP_TOWN, 33, 32, "right") || hit(GamePanel.MAP_TOWN, 34, 30, "down") || hit(GamePanel.MAP_TOWN, 35, 30, "down") || hit(GamePanel.MAP_TOWN, 37, 31, "left") || hit(GamePanel.MAP_TOWN, 34, 33, "up") || hit(GamePanel.MAP_TOWN, 35, 33, "up")
+        )
+            interactObject(19);
+
+        // batu town
+        else if (hit(GamePanel.MAP_TOWN, 12, 18, "right") || hit(GamePanel.MAP_TOWN, 12, 19, "right") || hit(GamePanel.MAP_TOWN, 13, 20, "up") || hit(GamePanel.MAP_TOWN, 15, 20, "left") || hit(GamePanel.MAP_TOWN, 15, 20, "up") || hit(GamePanel.MAP_TOWN, 16, 17, "left") || hit(GamePanel.MAP_TOWN, 16, 18, "left"))
+            interactObject(20);
+
         // temp challenge map
         // else if (hit(GamePanel.MAP_LIVING_ROOM, 30, 23, "up"))
         // openTheDoor(GamePanel.MAP_CHALLENGE, 30, 17, GamePanel.OUTSIDE_AREA);
@@ -253,7 +311,7 @@ public class EventHandler {
         else if (hit(GamePanel.MAP_TOWN, 14, 29, "any") || hit(GamePanel.MAP_TOWN, 14, 30, "any")
                 || hit(GamePanel.MAP_TOWN, 14, 31, "any") || hit(GamePanel.MAP_TOWN, 14, 32, "any")
                 || hit(GamePanel.MAP_TOWN, 14, 33, "any"))
-            sceneWater();
+            sceneWater();   
 
     }
 

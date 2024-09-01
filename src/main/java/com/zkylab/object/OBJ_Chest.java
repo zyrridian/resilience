@@ -40,7 +40,7 @@ public class OBJ_Chest extends Entity {
 
     public void interact() {
         if (!opened) {
-            gamePanel.playSoundEffect(3);
+            gamePanel.playSoundEffect(GamePanel.SFX_UNLOCK);
             if (!gamePanel.player.canObtainItem(loot)) {
                 startDialogue(this, 0);
             } else {

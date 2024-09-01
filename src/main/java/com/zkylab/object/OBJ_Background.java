@@ -19,7 +19,7 @@ public class OBJ_Background extends Entity {
     }
 
     public boolean use(Entity entity) {
-        gamePanel.playSoundEffect(1);
+        // gamePanel.playSoundEffect(1);
         gamePanel.ui.addMessage("Koin +" + value);
         gamePanel.player.coin += value;
         return true;

@@ -16,7 +16,7 @@ public class OBJ_Potion_Red extends Entity {
         value = 5;
         down1 = setup("/objects/potion_red", gamePanel.tileSize, gamePanel.tileSize);
         description = "[" + name + "]\nMemulihkan nyawa +" + value + ".";
-        price = 25;
+        price = 0;
         stackable = true;
         setDialogue();
     }
@@ -28,7 +28,7 @@ public class OBJ_Potion_Red extends Entity {
     public boolean use(Entity entity) {
         startDialogue(this, 0);
         entity.life += value;
-        gamePanel.playSoundEffect(2);
+        gamePanel.playSoundEffect(GamePanel.SFX_POWER_UP);
         return true;
     }
 

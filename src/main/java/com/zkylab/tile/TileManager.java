@@ -62,12 +62,12 @@ public class TileManager {
         loadMap("/maps/house.txt", GamePanel.MAP_HOUSE);
         loadMap("/maps/quake.txt", GamePanel.MAP_TOWN);
         loadMap("/maps/house-livingroom.txt", GamePanel.MAP_LIVING_ROOM);
-        // loadMap("/maps/challenge.txt", GamePanel.MAP_CHALLENGE);
         loadMap("/maps/road.txt", GamePanel.MAP_ROAD);
         loadMap("/maps/gedung01.txt", GamePanel.MAP_TOWER_1);
         loadMap("/maps/gedung02.txt", GamePanel.MAP_TOWER_2);
         loadMap("/maps/gedung03.txt", GamePanel.MAP_TOWER_3);
         loadMap("/maps/river.txt", GamePanel.MAP_RIVER);
+        loadMap("/maps/challenge.txt", GamePanel.MAP_CHALLENGE);
     }
 
     public void getTileImage() {

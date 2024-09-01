@@ -23,7 +23,7 @@ public class NPC_Bayu extends Entity {
         solidAreaDefaultX = solidArea.x;
         solidAreaDefaultY = solidArea.y;
 
-        dialogueSet = 0;
+        dialogueSet = -1;
 
         // if (Progress.cutsceneWarningFinished) {
         //     sleep = false;
@@ -56,7 +56,7 @@ public class NPC_Bayu extends Entity {
         dialogues[0][1] = "Jangan khawatir, aku sudah terbiasa\nhidup di gunung berapi ini.";
         dialogues[1][0] = "Lucu, ya? Gempa kali ini bukan dari\nsi gunung tua ini, tapi dari tempat lain.";
         dialogues[1][1] = "Biasanya, aku mengaitkan getaran tanah\ndengan letusan, tapi kali ini berbeda.";
-        dialogues[2][0] = "Banyak orang takut tinggal di dekat gunung berapi,\ntapi tanah di sini sangat subur, sempurna\nuntuk bertani.";
+        dialogues[2][0] = "Banyak orang takut tinggal di dekat gunung\nberapi, tapi tanah di sini sangat subur, sempurna untuk\nbertani.";
         dialogues[3][0] = "Gempa ini membuat beberapa jalur air\ntergeser. Aku harus mencari sumber air baru\nuntuk mengairi sawahku.";
         dialogues[4][0] = "Tapi, tahu tidak? Gempa ini mengingatkan kita\nbahwa bukan hanya gunung yang bisa\nmenyebabkan masalah. Alam punya banyak\ncara untuk menguji kita.";
         dialogues[5][0] = "Sejauh ini, ladangku baik-baik saja,\ntapi aku harus terus mengawasi,\nsiapa tahu ada tanah longsor kecil setelah ini.";
