@@ -11,7 +11,7 @@ public class OBJ_Sword_God extends Entity {
         super(gamePanel);
         type = type_sword_god;
         name = objName;
-        down1 = setup("/objects/sword_god", gamePanel.tileSize, gamePanel.tileSize);
+        down1 = setup("/objects/sword_purple", gamePanel.tileSize, gamePanel.tileSize);
         attackValue = 999;
         attackArea.width = 36;
         attackArea.height = 36;

@@ -14,7 +14,7 @@ public class NPC_Bayu extends Entity {
 
         name = npcName;
         isNPC = true;
-        direction = "right";
+        direction = "down";
         speed = 1;
         solidArea.x = 9;
         solidArea.y = 18;

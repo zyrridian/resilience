@@ -11,7 +11,7 @@ public class OBJ_Shield_Normal extends Entity {
         super(gamePanel);
         type = type_shield;
         name = objName;
-        down1 = setup("/objects/shield_normal", gamePanel.tileSize, gamePanel.tileSize);
+        down1 = setup("/objects/shield_base", gamePanel.tileSize, gamePanel.tileSize);
         defenseValue = 1;
         description = "[" + name + "]\nTerbuat dari besi.";
         price = 20;

@@ -244,14 +244,14 @@ public class Player extends Entity {
     }
 
     private void loadSwordAttackImages() {
-        attackUp1 = setup("/player/mc_attack_up_1", gamePanel.tileSize, gamePanel.tileSize * 2);
-        attackUp2 = setup("/player/mc_attack_up_2", gamePanel.tileSize, gamePanel.tileSize * 2);
-        attackDown1 = setup("/player/mc_attack_down_1", gamePanel.tileSize, gamePanel.tileSize * 2);
-        attackDown2 = setup("/player/mc_attack_down_2", gamePanel.tileSize, gamePanel.tileSize * 2);
-        attackLeft1 = setup("/player/mc_attack_left_1", gamePanel.tileSize * 2, gamePanel.tileSize);
-        attackLeft2 = setup("/player/mc_attack_left_2", gamePanel.tileSize * 2, gamePanel.tileSize);
-        attackRight1 = setup("/player/mc_attack_right_1", gamePanel.tileSize * 2, gamePanel.tileSize);
-        attackRight2 = setup("/player/mc_attack_right_2", gamePanel.tileSize * 2, gamePanel.tileSize);
+        attackUp1 = setup("/player/arjuna_base_attack_up_1", gamePanel.tileSize, gamePanel.tileSize * 2);
+        attackUp2 = setup("/player/arjuna_base_attack_up_2", gamePanel.tileSize, gamePanel.tileSize * 2);
+        attackDown1 = setup("/player/arjuna_base_attack_down_1", gamePanel.tileSize, gamePanel.tileSize * 2);
+        attackDown2 = setup("/player/arjuna_base_attack_down_2", gamePanel.tileSize, gamePanel.tileSize * 2);
+        attackLeft1 = setup("/player/arjuna_base_attack_left_1", gamePanel.tileSize * 2, gamePanel.tileSize);
+        attackLeft2 = setup("/player/arjuna_base_attack_left_2", gamePanel.tileSize * 2, gamePanel.tileSize);
+        attackRight1 = setup("/player/arjuna_base_attack_right_1", gamePanel.tileSize * 2, gamePanel.tileSize);
+        attackRight2 = setup("/player/arjuna_base_attack_right_2", gamePanel.tileSize * 2, gamePanel.tileSize);
     }
 
     private void loadSwordSuperImages() {
@@ -266,14 +266,14 @@ public class Player extends Entity {
     }
 
     private void loadSwordGodImages() {
-        attackUp1 = setup("/player/mc_attackgod_up_1", gamePanel.tileSize, gamePanel.tileSize * 2);
-        attackUp2 = setup("/player/mc_attackgod_up_2", gamePanel.tileSize, gamePanel.tileSize * 2);
-        attackDown1 = setup("/player/mc_attackgod_down_1", gamePanel.tileSize, gamePanel.tileSize * 2);
-        attackDown2 = setup("/player/mc_attackgod_down_2", gamePanel.tileSize, gamePanel.tileSize * 2);
-        attackLeft1 = setup("/player/mc_attackgod_left_1", gamePanel.tileSize * 2, gamePanel.tileSize);
-        attackLeft2 = setup("/player/mc_attackgod_left_2", gamePanel.tileSize * 2, gamePanel.tileSize);
-        attackRight1 = setup("/player/mc_attackgod_right_1", gamePanel.tileSize * 2, gamePanel.tileSize);
-        attackRight2 = setup("/player/mc_attackgod_right_2", gamePanel.tileSize * 2, gamePanel.tileSize);
+        attackUp1 = setup("/player/arjuna_purple_attack_up_1", gamePanel.tileSize, gamePanel.tileSize * 2);
+        attackUp2 = setup("/player/arjuna_purple_attack_up_2", gamePanel.tileSize, gamePanel.tileSize * 2);
+        attackDown1 = setup("/player/arjuna_purple_attack_down_1", gamePanel.tileSize, gamePanel.tileSize * 2);
+        attackDown2 = setup("/player/arjuna_purple_attack_down_2", gamePanel.tileSize, gamePanel.tileSize * 2);
+        attackLeft1 = setup("/player/arjuna_purple_attack_left_1", gamePanel.tileSize * 2, gamePanel.tileSize);
+        attackLeft2 = setup("/player/arjuna_purple_attack_left_2", gamePanel.tileSize * 2, gamePanel.tileSize);
+        attackRight1 = setup("/player/arjuna_purple_attack_right_1", gamePanel.tileSize * 2, gamePanel.tileSize);
+        attackRight2 = setup("/player/arjuna_purple_attack_right_2", gamePanel.tileSize * 2, gamePanel.tileSize);
     }
 
     private void loadAxeAttackImages() {
@@ -314,10 +314,10 @@ public class Player extends Entity {
     }
 
     public void loadShieldNormal() {
-        guardUp = setup("/player/mc_guard_up", gamePanel.tileSize, gamePanel.tileSize);
-        guardDown = setup("/player/mc_guard_down", gamePanel.tileSize, gamePanel.tileSize);
-        guardLeft = setup("/player/mc_guard_left", gamePanel.tileSize, gamePanel.tileSize);
-        guardRight = setup("/player/mc_guard_right", gamePanel.tileSize, gamePanel.tileSize);
+        guardUp = setup("/player/arjuna_base_guard_up", gamePanel.tileSize, gamePanel.tileSize);
+        guardDown = setup("/player/arjuna_base_guard_down", gamePanel.tileSize, gamePanel.tileSize);
+        guardLeft = setup("/player/arjuna_base_guard_left", gamePanel.tileSize, gamePanel.tileSize);
+        guardRight = setup("/player/arjuna_base_guard_right", gamePanel.tileSize, gamePanel.tileSize);
     }
 
     public void loadShieldSuper() {
@@ -328,10 +328,10 @@ public class Player extends Entity {
     }
 
     public void loadShieldGod() {
-        guardUp = setup("/player/mc_guardgod_up", gamePanel.tileSize, gamePanel.tileSize);
-        guardDown = setup("/player/mc_guardgod_down", gamePanel.tileSize, gamePanel.tileSize);
-        guardLeft = setup("/player/mc_guardgod_left", gamePanel.tileSize, gamePanel.tileSize);
-        guardRight = setup("/player/mc_guardgod_right", gamePanel.tileSize, gamePanel.tileSize);
+        guardUp = setup("/player/arjuna_red_guard_up", gamePanel.tileSize, gamePanel.tileSize);
+        guardDown = setup("/player/arjuna_red_guard_down", gamePanel.tileSize, gamePanel.tileSize);
+        guardLeft = setup("/player/arjuna_red_guard_left", gamePanel.tileSize, gamePanel.tileSize);
+        guardRight = setup("/player/arjuna_red_guard_right", gamePanel.tileSize, gamePanel.tileSize);
     }
 
     /**

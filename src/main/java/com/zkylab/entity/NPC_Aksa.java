@@ -130,8 +130,8 @@ public class NPC_Aksa extends Entity {
         inventory.add(new OBJ_Key(gamePanel));
         inventory.add(new OBJ_Tent(gamePanel));
         inventory.add(new OBJ_Lantern(gamePanel));
-        inventory.add(new OBJ_Sword_Super(gamePanel));
-        inventory.add(new OBJ_Shield_Super(gamePanel));
+        // inventory.add(new OBJ_Sword_Super(gamePanel));
+        // inventory.add(new OBJ_Shield_Super(gamePanel));
         inventory.add(new OBJ_Sword_God(gamePanel));
         inventory.add(new OBJ_Shield_God(gamePanel));
     }

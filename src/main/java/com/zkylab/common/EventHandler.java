@@ -121,24 +121,30 @@ public class EventHandler {
 
         // ========== EVENT TELEPORT ========== //
 
+        // living room to house
+        if (hit(GamePanel.MAP_LIVING_ROOM, 27, 30, "down"))
+            teleport(GamePanel.MAP_HOUSE, 24, 23, GamePanel.OUTSIDE_AREA);
+        else if (hit(GamePanel.MAP_HOUSE, 24, 23, "up"))
+            openTheDoor(GamePanel.MAP_LIVING_ROOM, 27, 30, GamePanel.INDOOR_AREA);
+
         // house to road
-        if (hit(GamePanel.MAP_HOUSE, 24, 31, "down"))
+        else if (hit(GamePanel.MAP_HOUSE, 24, 31, "down"))
             teleport(GamePanel.MAP_ROAD, 19, 9, GamePanel.OUTSIDE_AREA);
         else if (hit(GamePanel.MAP_ROAD, 19, 9, "up"))
             teleport(GamePanel.MAP_HOUSE, 24, 31, GamePanel.OUTSIDE_AREA);
 
-        // road to town
+        // road to river
         else if (hit(GamePanel.MAP_ROAD, 38, 28, "right"))
+            teleport(GamePanel.MAP_RIVER, 17, 30, GamePanel.OUTSIDE_AREA);
+        else if (hit(GamePanel.MAP_RIVER, 17, 30, "left"))
+            teleport(GamePanel.MAP_ROAD, 38, 28, GamePanel.OUTSIDE_AREA);
+
+        // river to town
+        else if (hit(GamePanel.MAP_RIVER, 32, 30, "right"))
             teleport(GamePanel.MAP_TOWN, 10, 30, GamePanel.OUTSIDE_AREA);
         else if (hit(GamePanel.MAP_TOWN, 10, 29, "left") || hit(GamePanel.MAP_TOWN, 10, 30, "left")
                 || hit(GamePanel.MAP_TOWN, 10, 31, "left"))
-            teleport(GamePanel.MAP_ROAD, 38, 28, GamePanel.OUTSIDE_AREA);
-
-        // house to living room
-        else if (hit(GamePanel.MAP_HOUSE, 24, 23, "up"))
-            openTheDoor(GamePanel.MAP_LIVING_ROOM, 27, 30, GamePanel.INDOOR_AREA);
-        else if (hit(GamePanel.MAP_LIVING_ROOM, 27, 30, "down"))
-            teleport(GamePanel.MAP_HOUSE, 24, 23, GamePanel.OUTSIDE_AREA);
+            teleport(GamePanel.MAP_RIVER, 32, 30, GamePanel.OUTSIDE_AREA);
 
         // town to gedung01
         else if (hit(GamePanel.MAP_TOWN, 12, 29, "up"))
@@ -159,7 +165,7 @@ public class EventHandler {
             teleport(GamePanel.MAP_TOWN, 24, 29, GamePanel.OUTSIDE_AREA);
 
         // ========== INTERACT OBJECT ========= //
-        
+
         // kursi
         else if (hit(GamePanel.MAP_HOUSE, 18, 25, "right") || hit(GamePanel.MAP_HOUSE, 19, 24, "down")
                 || hit(GamePanel.MAP_HOUSE, 19, 26, "up") || hit(GamePanel.MAP_HOUSE, 20, 25, "left"))
@@ -202,7 +208,7 @@ public class EventHandler {
         // perapian
         else if (hit(GamePanel.MAP_LIVING_ROOM, 26, 23, "up") || hit(GamePanel.MAP_LIVING_ROOM, 27, 23, "up"))
             interactObject(8);
-        
+
         // pintu
         else if (hit(GamePanel.MAP_LIVING_ROOM, 23, 23, "up") || hit(GamePanel.MAP_LIVING_ROOM, 30, 23, "up"))
             interactObject(9);
@@ -211,19 +217,25 @@ public class EventHandler {
         else if (hit(GamePanel.MAP_LIVING_ROOM, 24, 23, "up") || hit(GamePanel.MAP_LIVING_ROOM, 25, 23, "up"))
             interactObject(10);
 
-        // jam 
+        // jam
         else if (hit(GamePanel.MAP_LIVING_ROOM, 28, 23, "up") || hit(GamePanel.MAP_LIVING_ROOM, 29, 23, "up"))
             interactObject(11);
 
         // sofa
-        else if (hit(GamePanel.MAP_LIVING_ROOM, 24, 24, "down") || hit(GamePanel.MAP_LIVING_ROOM, 30, 25, "left") || hit(GamePanel.MAP_LIVING_ROOM, 25, 26, "left") || hit(GamePanel.MAP_LIVING_ROOM, 25, 27, "left") || hit(GamePanel.MAP_LIVING_ROOM, 24, 28, "up") || hit(GamePanel.MAP_LIVING_ROOM, 23, 25, "right") || hit(GamePanel.MAP_LIVING_ROOM, 23, 26, "right") || hit(GamePanel.MAP_LIVING_ROOM, 23, 27, "right")
-                || hit(GamePanel.MAP_LIVING_ROOM, 29, 24, "down") || hit(GamePanel.MAP_LIVING_ROOM, 25, 25, "left") || hit(GamePanel.MAP_LIVING_ROOM, 30, 26, "left") || hit(GamePanel.MAP_LIVING_ROOM, 30, 27, "left") || hit(GamePanel.MAP_LIVING_ROOM, 29, 28, "up") || hit(GamePanel.MAP_LIVING_ROOM, 28, 25, "right") || hit(GamePanel.MAP_LIVING_ROOM, 28, 26, "right") || hit(GamePanel.MAP_LIVING_ROOM, 28, 27, "right"))
-                interactObject(12);
+        else if (hit(GamePanel.MAP_LIVING_ROOM, 24, 24, "down") || hit(GamePanel.MAP_LIVING_ROOM, 30, 25, "left")
+                || hit(GamePanel.MAP_LIVING_ROOM, 25, 26, "left") || hit(GamePanel.MAP_LIVING_ROOM, 25, 27, "left")
+                || hit(GamePanel.MAP_LIVING_ROOM, 24, 28, "up") || hit(GamePanel.MAP_LIVING_ROOM, 23, 25, "right")
+                || hit(GamePanel.MAP_LIVING_ROOM, 23, 26, "right") || hit(GamePanel.MAP_LIVING_ROOM, 23, 27, "right")
+                || hit(GamePanel.MAP_LIVING_ROOM, 29, 24, "down") || hit(GamePanel.MAP_LIVING_ROOM, 25, 25, "left")
+                || hit(GamePanel.MAP_LIVING_ROOM, 30, 26, "left") || hit(GamePanel.MAP_LIVING_ROOM, 30, 27, "left")
+                || hit(GamePanel.MAP_LIVING_ROOM, 29, 28, "up") || hit(GamePanel.MAP_LIVING_ROOM, 28, 25, "right")
+                || hit(GamePanel.MAP_LIVING_ROOM, 28, 26, "right") || hit(GamePanel.MAP_LIVING_ROOM, 28, 27, "right"))
+            interactObject(12);
 
         // kipas
-        else if (hit(GamePanel.MAP_LIVING_ROOM, 25, 25, "right") || hit(GamePanel.MAP_LIVING_ROOM, 25, 26, "right") || hit(GamePanel.MAP_LIVING_ROOM, 28, 25, "left") || hit(GamePanel.MAP_LIVING_ROOM, 28, 26, "left"))
+        else if (hit(GamePanel.MAP_LIVING_ROOM, 25, 25, "right") || hit(GamePanel.MAP_LIVING_ROOM, 25, 26, "right")
+                || hit(GamePanel.MAP_LIVING_ROOM, 28, 25, "left") || hit(GamePanel.MAP_LIVING_ROOM, 28, 26, "left"))
             interactObject(13);
-
 
         // temp challenge map
         // else if (hit(GamePanel.MAP_LIVING_ROOM, 30, 23, "up"))

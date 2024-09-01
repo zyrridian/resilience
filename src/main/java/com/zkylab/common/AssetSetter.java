@@ -55,27 +55,25 @@ public class AssetSetter {
 
         gamePanel.npc[mapNumber][i] = new NPC_Rimba(gamePanel);
         gamePanel.npc[mapNumber][i].worldX = gamePanel.tileSize * 18;
-        gamePanel.npc[mapNumber][i].worldY = gamePanel.tileSize * 27;
+        gamePanel.npc[mapNumber][i].worldY = gamePanel.tileSize * 28;
         i++;
 
-        gamePanel.npc[mapNumber][i] = new NPC_Tirta(gamePanel);
-        gamePanel.npc[mapNumber][i].worldX = gamePanel.tileSize * 20;
-        gamePanel.npc[mapNumber][i].worldY = gamePanel.tileSize * 27;
-        i++;
+        mapNumber = GamePanel.MAP_RIVER;
+        i = 0;
 
         gamePanel.npc[mapNumber][i] = new NPC_Bayu(gamePanel);
-        gamePanel.npc[mapNumber][i].worldX = gamePanel.tileSize * 22;
-        gamePanel.npc[mapNumber][i].worldY = gamePanel.tileSize * 27;
-        i++;
-
-        gamePanel.npc[mapNumber][i] = new NPC_Bumi(gamePanel);
-        gamePanel.npc[mapNumber][i].worldX = gamePanel.tileSize * 26;
+        gamePanel.npc[mapNumber][i].worldX = gamePanel.tileSize * 18;
         gamePanel.npc[mapNumber][i].worldY = gamePanel.tileSize * 27;
         i++;
 
         gamePanel.npc[mapNumber][i] = new NPC_Lestari(gamePanel);
-        gamePanel.npc[mapNumber][i].worldX = gamePanel.tileSize * 30;
-        gamePanel.npc[mapNumber][i].worldY = gamePanel.tileSize * 27;
+        gamePanel.npc[mapNumber][i].worldX = gamePanel.tileSize * 29;
+        gamePanel.npc[mapNumber][i].worldY = gamePanel.tileSize * 25;
+        i++;
+
+        gamePanel.npc[mapNumber][i] = new NPC_Tirta(gamePanel);
+        gamePanel.npc[mapNumber][i].worldX = gamePanel.tileSize * 18;
+        gamePanel.npc[mapNumber][i].worldY = gamePanel.tileSize * 21;
         i++;
 
         mapNumber = GamePanel.MAP_TOWN;
@@ -104,6 +102,11 @@ public class AssetSetter {
         gamePanel.npc[mapNumber][i] = new NPC_Sari(gamePanel);
         gamePanel.npc[mapNumber][i].worldX = gamePanel.tileSize * 36;
         gamePanel.npc[mapNumber][i].worldY = gamePanel.tileSize * 19;
+        i++;
+
+        gamePanel.npc[mapNumber][i] = new NPC_Bumi(gamePanel);
+        gamePanel.npc[mapNumber][i].worldX = gamePanel.tileSize * 19;
+        gamePanel.npc[mapNumber][i].worldY = gamePanel.tileSize * 33;
         i++;
 
         mapNumber = GamePanel.MAP_TOWER_1;

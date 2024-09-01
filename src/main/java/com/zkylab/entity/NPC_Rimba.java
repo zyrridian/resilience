@@ -13,7 +13,7 @@ public class NPC_Rimba extends Entity {
 
         name = npcName;
         isNPC = true;
-        direction = "right";
+        direction = "left";
         speed = 1;
         solidArea.x = 9;
         solidArea.y = 18;

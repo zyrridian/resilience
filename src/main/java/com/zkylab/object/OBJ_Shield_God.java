@@ -11,7 +11,7 @@ public class OBJ_Shield_God extends Entity {
         super(gamePanel);
         type = type_shield_god;
         name = objName;
-        down1 = setup("/objects/shield_god", gamePanel.tileSize, gamePanel.tileSize);
+        down1 = setup("/objects/shield_red", gamePanel.tileSize, gamePanel.tileSize);
         defenseValue = 999;
         description = "[" + name + "]\nPertahanan mutlak.";
         price = 1000;
