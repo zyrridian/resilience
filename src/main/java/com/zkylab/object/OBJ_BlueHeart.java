@@ -21,7 +21,7 @@ public class OBJ_BlueHeart extends Entity {
 
     public void setDialogues() {
         dialogues[0][0] = "Kamu mengambil benda merah.";
-        dialogues[0][1] = "Sebuah batu misterius yang dari krakatoa.";
+        dialogues[0][1] = "Sebuah batu misterius dari krakatoa.";
     }
 
     public boolean use(Entity entity) {

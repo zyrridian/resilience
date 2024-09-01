@@ -35,7 +35,7 @@ public class CutsceneManager {
     public CutsceneManager(GamePanel gamePanel) {
         this.gamePanel = gamePanel;
         cutsceneMaster = new Entity(gamePanel);
-        endCredit = "Program/Desain/Music/Skenario"
+        endCredit = "Program/Desain/Music/Skenario\n\n"
                 + "Arye Burhanudin\n"
                 + "Rafi Ramdhani\n"
                 + "Rezky Aditia Fauzan\n"
@@ -375,7 +375,7 @@ public class CutsceneManager {
 
         // Stop music
         if (scenePhase == 0) {
-            gamePanel.stopMusic(GamePanel.DUNGEON_AREA);
+            gamePanel.stopMusic(GamePanel.MUSIC_DUNGEON);
             gamePanel.ui.npc = new OBJ_BlueHeart(gamePanel);
             scenePhase++;
         }
@@ -419,12 +419,12 @@ public class CutsceneManager {
             }
 
             String text = "Setelah perjuangan berat melawan monster,\n"
-            + "akhirnya petualang berhasil menyelamatkan pulau ini.\n"
-            + "Tapi ini bukan akhir dari segalanya, karena monster\n"
-            + "di pulau ini masih terus bermunculan tanpa henti.\n"
-            + "Penyebab dari gempa ini masih belum diketahui."
-            + "Petualangan Resilience baru saja dimulai.";
-            drawString(alpha, 30F, 200, text, 70);
+                    + "akhirnya petualang berhasil menyelamatkan pulau.\n"
+                    + "Tapi ini bukan akhir dari segalanya, karena penyebab\n"
+                    + "gempa di kota ada hubungannya dengan para monster.\n"
+                    + "Dan Krakatoa bukanlah satu-satunya monster raksasa.\n"
+                    + "Petualangan Resilience baru saja dimulai.";
+            drawString(alpha, 30F, (int) (gamePanel.tileSize * 2.5), text, 70);
             gamePanel.playMusic(GamePanel.MUSIC_INDOOR);
 
             if (counterReached(600)) {
@@ -456,8 +456,8 @@ public class CutsceneManager {
             drawBlackBackground(1F);
             y--;
             drawString(1F, 30F, y, endCredit, 40);
-            if (counterReached(300)) {
-                scenePhase++;
+            if (counterReached(360)) {
+                System.exit(0);
             }
         }
 
