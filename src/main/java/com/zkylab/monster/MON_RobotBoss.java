@@ -8,7 +8,7 @@ import com.zkylab.object.OBJ_Coin_Red;
 public class MON_RobotBoss extends Entity {
     
     GamePanel gamePanel;
-    public static final String monName = "Robot Boss";
+    public static final String monName = "Krakatoa";
 
     public MON_RobotBoss(GamePanel gamePanel) {
 
@@ -57,33 +57,33 @@ public class MON_RobotBoss extends Entity {
         int i = 7;
 
         if (!inRage) {
-            up1 = setup("/monster/robot_boss_walk_up_1", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            up2 = setup("/monster/robot_boss_walk_up_2", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            // up3 = setup("/monster/robot_boss_walk_up_3", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            down1 = setup("/monster/robot_boss_walk_down_1", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            down2 = setup("/monster/robot_boss_walk_down_2", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            // down3 = setup("/monster/robot_boss_walk_down_3", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            left1 = setup("/monster/robot_boss_walk_left_1", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            left2 = setup("/monster/robot_boss_walk_left_2", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            // left3 = setup("/monster/robot_boss_walk_left_3", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            right1 = setup("/monster/robot_boss_walk_right_1", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            right2 = setup("/monster/robot_boss_walk_right_2", gamePanel.tileSize * i, gamePanel.tileSize * i);  
-            // right3 = setup("/monster/robot_boss_walk_right_3", gamePanel.tileSize * i, gamePanel.tileSize * i);   
+            up1 = setup("/monster/krakatoa_walk_up_1", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            up2 = setup("/monster/krakatoa_walk_up_2", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            // up3 = setup("/monster/krakatoa_walk_up_3", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            down1 = setup("/monster/krakatoa_walk_down_1", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            down2 = setup("/monster/krakatoa_walk_down_2", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            // down3 = setup("/monster/krakatoa_walk_down_3", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            left1 = setup("/monster/krakatoa_walk_left_1", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            left2 = setup("/monster/krakatoa_walk_left_2", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            // left3 = setup("/monster/krakatoa_walk_left_3", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            right1 = setup("/monster/krakatoa_walk_right_1", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            right2 = setup("/monster/krakatoa_walk_right_2", gamePanel.tileSize * i, gamePanel.tileSize * i);  
+            // right3 = setup("/monster/krakatoa_walk_right_3", gamePanel.tileSize * i, gamePanel.tileSize * i);   
         }
 
         if (inRage) {
-            up1 = setup("/monster/robot_boss_walk_up_1", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            up2 = setup("/monster/robot_boss_walk_up_2", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            // up3 = setup("/monster/robot_boss_walk_up_3", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            down1 = setup("/monster/robot_boss_walk_down_1", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            down2 = setup("/monster/robot_boss_walk_down_2", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            // down3 = setup("/monster/robot_boss_walk_down_3", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            left1 = setup("/monster/robot_boss_walk_left_1", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            left2 = setup("/monster/robot_boss_walk_left_2", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            // left3 = setup("/monster/robot_boss_walk_left_3", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            right1 = setup("/monster/robot_boss_walk_right_1", gamePanel.tileSize * i, gamePanel.tileSize * i);
-            right2 = setup("/monster/robot_boss_walk_right_2", gamePanel.tileSize * i, gamePanel.tileSize * i);  
-            // right3 = setup("/monster/robot_boss_walk_right_3", gamePanel.tileSize * i, gamePanel.tileSize * i);     
+            up1 = setup("/monster/krakatoa_walk_up_1", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            up2 = setup("/monster/krakatoa_walk_up_2", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            // up3 = setup("/monster/krakatoa_walk_up_3", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            down1 = setup("/monster/krakatoa_walk_down_1", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            down2 = setup("/monster/krakatoa_walk_down_2", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            // down3 = setup("/monster/krakatoa_walk_down_3", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            left1 = setup("/monster/krakatoa_walk_left_1", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            left2 = setup("/monster/krakatoa_walk_left_2", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            // left3 = setup("/monster/krakatoa_walk_left_3", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            right1 = setup("/monster/krakatoa_walk_right_1", gamePanel.tileSize * i, gamePanel.tileSize * i);
+            right2 = setup("/monster/krakatoa_walk_right_2", gamePanel.tileSize * i, gamePanel.tileSize * i);  
+            // right3 = setup("/monster/krakatoa_walk_right_3", gamePanel.tileSize * i, gamePanel.tileSize * i);     
         }
         
     }
@@ -93,25 +93,25 @@ public class MON_RobotBoss extends Entity {
         int i = 7;
         
         if (!inRage) {
-            attackUp1 = setup("/monster/robot_boss_attack_up_1", gamePanel.tileSize * i, gamePanel.tileSize * i * 2);
-            attackUp2 = setup("/monster/robot_boss_attack_up_2", gamePanel.tileSize * i, gamePanel.tileSize * i * 2);
-            attackDown1 = setup("/monster/robot_boss_attack_down_1", gamePanel.tileSize * i, gamePanel.tileSize * i * 2);
-            attackDown2 = setup("/monster/robot_boss_attack_down_2", gamePanel.tileSize * i, gamePanel.tileSize * i * 2);
-            attackLeft1 = setup("/monster/robot_boss_attack_left_1", gamePanel.tileSize * i * 2, gamePanel.tileSize * i);
-            attackLeft2 = setup("/monster/robot_boss_attack_left_2", gamePanel.tileSize * i * 2, gamePanel.tileSize * i);
-            attackRight1 = setup("/monster/robot_boss_attack_right_1", gamePanel.tileSize * i * 2, gamePanel.tileSize * i);
-            attackRight2 = setup("/monster/robot_boss_attack_right_2", gamePanel.tileSize * i * 2, gamePanel.tileSize * i);     
+            attackUp1 = setup("/monster/krakatoa_attack_up_1", gamePanel.tileSize * i, gamePanel.tileSize * i * 2);
+            attackUp2 = setup("/monster/krakatoa_attack_up_2", gamePanel.tileSize * i, gamePanel.tileSize * i * 2);
+            attackDown1 = setup("/monster/krakatoa_attack_down_1", gamePanel.tileSize * i, gamePanel.tileSize * i * 2);
+            attackDown2 = setup("/monster/krakatoa_attack_down_2", gamePanel.tileSize * i, gamePanel.tileSize * i * 2);
+            attackLeft1 = setup("/monster/krakatoa_attack_left_1", gamePanel.tileSize * i * 2, gamePanel.tileSize * i);
+            attackLeft2 = setup("/monster/krakatoa_attack_left_2", gamePanel.tileSize * i * 2, gamePanel.tileSize * i);
+            attackRight1 = setup("/monster/krakatoa_attack_right_1", gamePanel.tileSize * i * 2, gamePanel.tileSize * i);
+            attackRight2 = setup("/monster/krakatoa_attack_right_2", gamePanel.tileSize * i * 2, gamePanel.tileSize * i);     
         }
 
         if (inRage) {
-            attackUp1 = setup("/monster/robot_boss_attack_up_1", gamePanel.tileSize * i, gamePanel.tileSize * i * 2);
-            attackUp2 = setup("/monster/robot_boss_attack_up_2", gamePanel.tileSize * i, gamePanel.tileSize * i * 2);
-            attackDown1 = setup("/monster/robot_boss_attack_down_1", gamePanel.tileSize * i, gamePanel.tileSize * i * 2);
-            attackDown2 = setup("/monster/robot_boss_attack_down_2", gamePanel.tileSize * i, gamePanel.tileSize * i * 2);
-            attackLeft1 = setup("/monster/robot_boss_attack_left_1", gamePanel.tileSize * i * 2, gamePanel.tileSize * i);
-            attackLeft2 = setup("/monster/robot_boss_attack_left_2", gamePanel.tileSize * i * 2, gamePanel.tileSize * i);
-            attackRight1 = setup("/monster/robot_boss_attack_right_1", gamePanel.tileSize * i * 2, gamePanel.tileSize * i);
-            attackRight2 = setup("/monster/robot_boss_attack_right_2", gamePanel.tileSize * i * 2, gamePanel.tileSize * i);   
+            attackUp1 = setup("/monster/krakatoa_attack_up_1", gamePanel.tileSize * i, gamePanel.tileSize * i * 2);
+            attackUp2 = setup("/monster/krakatoa_attack_up_2", gamePanel.tileSize * i, gamePanel.tileSize * i * 2);
+            attackDown1 = setup("/monster/krakatoa_attack_down_1", gamePanel.tileSize * i, gamePanel.tileSize * i * 2);
+            attackDown2 = setup("/monster/krakatoa_attack_down_2", gamePanel.tileSize * i, gamePanel.tileSize * i * 2);
+            attackLeft1 = setup("/monster/krakatoa_attack_left_1", gamePanel.tileSize * i * 2, gamePanel.tileSize * i);
+            attackLeft2 = setup("/monster/krakatoa_attack_left_2", gamePanel.tileSize * i * 2, gamePanel.tileSize * i);
+            attackRight1 = setup("/monster/krakatoa_attack_right_1", gamePanel.tileSize * i * 2, gamePanel.tileSize * i);
+            attackRight2 = setup("/monster/krakatoa_attack_right_2", gamePanel.tileSize * i * 2, gamePanel.tileSize * i);   
         }
 
     }

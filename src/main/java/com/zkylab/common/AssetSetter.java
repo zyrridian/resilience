@@ -16,6 +16,7 @@ import com.zkylab.entity.NPC_Tirta;
 import com.zkylab.monster.MON_Glimp;
 import com.zkylab.monster.MON_Mebot;
 import com.zkylab.monster.MON_Nibby;
+import com.zkylab.monster.MON_RobotBoss;
 import com.zkylab.monster.MON_Toonamy;
 import com.zkylab.object.OBJ_Door;
 
@@ -150,6 +151,14 @@ public class AssetSetter {
         gamePanel.monster[mapNumber][i] = new MON_Toonamy(gamePanel);
         gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 27;
         gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 26;
+        i++;
+
+        mapNumber = GamePanel.MAP_CHALLENGE;
+        i = 0;
+
+        gamePanel.monster[mapNumber][i] = new MON_RobotBoss(gamePanel);
+        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 30;
+        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 20;
         i++;
 
     }
