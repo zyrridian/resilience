@@ -90,12 +90,12 @@ public class KeyHandler implements KeyListener {
                 gamePanel.ui.commandNumber--;
                 gamePanel.playSoundEffect(GamePanel.SFX_CURSOR);
                 if (gamePanel.ui.commandNumber < 0)
-                    gamePanel.ui.commandNumber = 4;
+                    gamePanel.ui.commandNumber = 3;
             }
             if (code == KeyEvent.VK_DOWN || code == KeyEvent.VK_S) {
                 gamePanel.ui.commandNumber++;
                 gamePanel.playSoundEffect(GamePanel.SFX_CURSOR);
-                if (gamePanel.ui.commandNumber > 4)
+                if (gamePanel.ui.commandNumber > 3)
                     gamePanel.ui.commandNumber = 0;
             }
             if (code == KeyEvent.VK_ENTER) {
