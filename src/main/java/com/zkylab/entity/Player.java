@@ -58,13 +58,13 @@ public class Player extends Entity {
      * Sets the default values for the player's attributes.
      */
     public void setDefaultValues() {
-        // worldX = gamePanel.tileSize * 28;
-        // worldY = gamePanel.tileSize * 23;
-        worldX = gamePanel.tileSize * 10;
-        worldY = gamePanel.tileSize * 30;
+        worldX = gamePanel.tileSize * 28;
+        worldY = gamePanel.tileSize * 23;
+        // worldX = gamePanel.tileSize * 10;
+        // worldY = gamePanel.tileSize * 30;
         defaultSpeed = 4;
         speed = defaultSpeed;
-        direction = "right";
+        direction = "down";
 
         // Player's initial status
         level = 1;

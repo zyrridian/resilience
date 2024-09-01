@@ -41,8 +41,8 @@ public class GamePanel extends JPanel implements Runnable {
 
     // World Settings
     public final int maxMap = 20;
-    // public int currentMap = MAP_LIVING_ROOM;
-    public int currentMap = MAP_TOWN;
+    public int currentMap = MAP_LIVING_ROOM;
+    // public int currentMap = MAP_TOWN;
     public final static int MAP_HOUSE = 0;
     public final static int MAP_LIVING_ROOM = 1;
     public final static int MAP_TOWN = 2;

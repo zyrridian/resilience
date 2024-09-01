@@ -92,7 +92,7 @@ public class CutsceneManager {
             int shakeAmplitude = 10;
             gamePanel.player.worldX += (int) (Math.random() * shakeAmplitude * 2 - shakeAmplitude);
             gamePanel.player.worldY += (int) (Math.random() * shakeAmplitude * 2 - shakeAmplitude);
-            if (counterReached(30)) {
+            if (counterReached(300)) {
                 scenePhase++;
             }
         }

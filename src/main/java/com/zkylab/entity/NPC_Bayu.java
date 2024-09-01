@@ -25,11 +25,11 @@ public class NPC_Bayu extends Entity {
 
         dialogueSet = 0;
 
-        if (Progress.cutsceneWarningFinished) {
-            sleep = false;
-        } else {
+        // if (Progress.cutsceneWarningFinished) {
+        //     sleep = false;
+        // } else {
             sleep = true;
-        }
+        // }
 
         onPath = false;
 
@@ -114,14 +114,10 @@ public class NPC_Bayu extends Entity {
     public void speak() {
         facePlayer();
         startDialogue(this, dialogueSet);
-        if (Progress.cutsceneWarningFinished) {
-            dialogueSet = 1;
-        } else {
-            dialogueSet++;
-            if (dialogues[dialogueSet][0] == null) {
-                // dialogueSet = 0; // Dialogue will be replayed again
-                dialogueSet--; // Dialogue will be stuck in the end state
-            }
+        dialogueSet++;
+        if (dialogues[dialogueSet][0] == null) {
+            // dialogueSet = 0; // Dialogue will be replayed again
+            dialogueSet--; // Dialogue will be stuck in the end state
         }
     }
 

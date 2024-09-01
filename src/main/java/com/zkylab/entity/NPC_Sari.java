@@ -24,11 +24,11 @@ public class NPC_Sari extends Entity {
 
         dialogueSet = 0;
 
-        if (Progress.cutsceneWarningFinished) {
-            sleep = false;
-        } else {
+        // if (Progress.cutsceneWarningFinished) {
+        //     sleep = false;
+        // } else {
             sleep = true;
-        }
+        // }
 
         onPath = false;
 
@@ -57,11 +57,11 @@ public class NPC_Sari extends Entity {
         dialogues[2][0] = "Namun, aku bukan orang bodoh yang\nmelompat ke dalam tanpa pikir panjang.";
         dialogues[2][1] = "Kau, bantu aku mengambilnya. Aku akan\nmemberimu sesuatu yang setimpal.";
         dialogues[3][0] = "Dan tolong, lakukan ini dengan hati-hati.\nAku tidak punya waktu untuk berurusan dengan\nlebih banyak masalah.";
-        dialogues[4][0] = "Aku menghargai keberanianmu, tapi ingat,\nsatu langkah salah dan kau akan terjebak di sana.";
-        dialogues[5][0] = "Baiklah, cepat selesaikan tugas ini, dan\nkita bisa kembali ke urusan masing-masing.";
-        dialogues[6][0] = "Oh, jangan kira aku tidak tahu betapa\nberbahayanya ini. Tapi ada hal-hal yang\ntidak bisa dikorbankan, bahkan dalam situasi seperti ini.";
-        dialogues[7][0] = "Terima kasih, kau benar-benar bisa diandalkan.\nMungkin aku akan mempertimbangkan untuk\nmempercayakan tugas penting lain padamu.";
-        dialogues[8][0] = "Sekarang, pergilah. Aku punya hal lain yang\nharus dilakukan, dan waktu adalah uang, kau tahu.";
+        dialogues[3][1] = "Aku menghargai keberanianmu, tapi ingat,\nsatu langkah salah dan kau akan terjebak di\nsana.";
+        dialogues[4][0] = "Baiklah, cepat selesaikan tugas ini, dan\nkita bisa kembali ke urusan masing-masing.";
+        dialogues[5][0] = "Oh, jangan kira aku tidak tahu betapa\nberbahayanya ini. Tapi ada hal-hal yang\ntidak bisa dikorbankan, bahkan dalam situasi\nseperti ini.";
+        dialogues[6][0] = "Terima kasih, kau benar-benar bisa diandalkan.\nMungkin aku akan mempertimbangkan untuk\nmempercayakan tugas penting lain padamu.";
+        dialogues[7][0] = "Sekarang, pergilah. Aku punya hal lain yang\nharus dilakukan, dan waktu adalah uang, kau\ntahu.";
     }
 
     public void setAction() {
@@ -112,14 +112,10 @@ public class NPC_Sari extends Entity {
     public void speak() {
         facePlayer();
         startDialogue(this, dialogueSet);
-        if (Progress.cutsceneWarningFinished) {
-            dialogueSet = 1;
-        } else {
             dialogueSet++;
-            if (dialogues[dialogueSet][0] == null) {
-                // dialogueSet = 0; // Dialogue will be replayed again
-                dialogueSet--; // Dialogue will be stuck in the end state
-            }
+        if (dialogues[dialogueSet][0] == null) {
+            // dialogueSet = 0; // Dialogue will be replayed again
+            dialogueSet--; // Dialogue will be stuck in the end state
         }
     }
 }

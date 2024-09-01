@@ -25,11 +25,11 @@ public class NPC_Chakara extends Entity {
 
         dialogueSet = -1;
 
-        if (Progress.cutsceneWarningFinished) {
-            sleep = false;
-        } else {
+        // if (Progress.cutsceneWarningFinished) {
+        //     sleep = false;
+        // } else {
             sleep = true;
-        }
+        // }
 
         onPath = false;
 
