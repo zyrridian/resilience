@@ -68,6 +68,7 @@ public class TileManager {
         loadMap("/maps/gedung03.txt", GamePanel.MAP_TOWER_3);
         loadMap("/maps/river.txt", GamePanel.MAP_RIVER);
         loadMap("/maps/challenge.txt", GamePanel.MAP_CHALLENGE);
+        loadMap("/maps/green.txt", GamePanel.MAP_GREEN);
     }
 
     public void getTileImage() {

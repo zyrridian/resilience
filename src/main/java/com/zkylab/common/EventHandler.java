@@ -184,8 +184,12 @@ public class EventHandler {
         else if (hit(GamePanel.MAP_TOWER_3, 28, 43, "down"))
             teleport(GamePanel.MAP_TOWN, 24, 29, GamePanel.OUTSIDE_AREA);
 
-        // road to challenge
+        // road to green
         else if (hit(GamePanel.MAP_ROAD, 26, 34, "down"))
+            teleport(GamePanel.MAP_GREEN, 24, 17, GamePanel.OUTSIDE_AREA);
+
+        // road to challenge
+        else if (hit(GamePanel.MAP_GREEN, 24, 39, "down"))
             teleport(GamePanel.MAP_CHALLENGE, 30, 17, GamePanel.DUNGEON_AREA);
 
         // ========== INTERACT OBJECT ========= //

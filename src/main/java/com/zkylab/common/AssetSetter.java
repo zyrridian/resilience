@@ -130,27 +130,82 @@ public class AssetSetter {
 
     public void setMonster() {
 
-        int mapNumber = GamePanel.MAP_TOWN;
+        int mapNumber = GamePanel.MAP_GREEN;
         int i = 0;
 
-        gamePanel.monster[mapNumber][i] = new MON_Glimp(gamePanel);
-        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 31;
+        gamePanel.monster[mapNumber][i] = new MON_Nibby(gamePanel);
+        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 21;
+        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 20;
+        i++;
+
+        gamePanel.monster[mapNumber][i] = new MON_Nibby(gamePanel);
+        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 27;
+        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 20;
+        i++;
+
+        gamePanel.monster[mapNumber][i] = new MON_Nibby(gamePanel);
+        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 13;
+        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 20;
+        i++;
+
+        gamePanel.monster[mapNumber][i] = new MON_Nibby(gamePanel);
+        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 33;
+        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 22;
+        i++;
+
+        gamePanel.monster[mapNumber][i] = new MON_Nibby(gamePanel);
+        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 28;
         gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 23;
         i++;
 
         gamePanel.monster[mapNumber][i] = new MON_Mebot(gamePanel);
-        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 32;
-        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 17;
+        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 13;
+        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 27;
         i++;
 
-        gamePanel.monster[mapNumber][i] = new MON_Nibby(gamePanel);
-        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 23;
-        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 17;
+        gamePanel.monster[mapNumber][i] = new MON_Mebot(gamePanel);
+        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 19;
+        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 28;
+        i++;
+
+        gamePanel.monster[mapNumber][i] = new MON_Mebot(gamePanel);
+        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 22;
+        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 26;
+        i++;
+
+        gamePanel.monster[mapNumber][i] = new MON_Mebot(gamePanel);
+        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 29;
+        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 28;
         i++;
 
         gamePanel.monster[mapNumber][i] = new MON_Toonamy(gamePanel);
-        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 27;
-        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 26;
+        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 14;
+        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 31;
+        i++;
+        
+        gamePanel.monster[mapNumber][i] = new MON_Toonamy(gamePanel);
+        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 30;
+        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 31;
+        i++;
+
+        gamePanel.monster[mapNumber][i] = new MON_Toonamy(gamePanel);
+        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 26;
+        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 31;
+        i++;
+
+        gamePanel.monster[mapNumber][i] = new MON_Toonamy(gamePanel);
+        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 32;
+        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 31;
+        i++;
+
+        gamePanel.monster[mapNumber][i] = new MON_Glimp(gamePanel);
+        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 20;
+        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 37;
+        i++;
+
+        gamePanel.monster[mapNumber][i] = new MON_Glimp(gamePanel);
+        gamePanel.monster[mapNumber][i].worldX = gamePanel.tileSize * 29;
+        gamePanel.monster[mapNumber][i].worldY = gamePanel.tileSize * 37;
         i++;
 
         mapNumber = GamePanel.MAP_CHALLENGE;

@@ -52,6 +52,7 @@ public class GamePanel extends JPanel implements Runnable {
     public final static int MAP_TOWER_3 = 6;
     public final static int MAP_RIVER = 7;
     public final static int MAP_CHALLENGE = 8;
+    public final static int MAP_GREEN = 9;
     public int maxWorldCol;
     public int maxWorldRow;
 
